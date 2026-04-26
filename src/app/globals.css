@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
 /* @theme inline {
@@ -20,7 +20,35 @@
 } */
 
 body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: "Chivo", sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Chivo", sans-serif;
+}
+@keyframes marquee-rl {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee-rl {
+  animation: marquee-rl 20s linear infinite;
+}
+
+@keyframes marquee-lr {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.animate-marquee-lr {
+  animation: marquee-lr 20s linear infinite;
+}
+
+.group:hover .animate-marquee-rl,
+.group:hover .animate-marquee-lr {
+  animation-play-state: paused;
 }
