@@ -76,7 +76,7 @@ const TeamSection = () => {
   };
 
   return (
-    <section className="max-w-[1400px] mx-auto my-10 overflow-hidden relative">
+    <section className="max-w-[1440px] mx-auto my-10 overflow-hidden relative">
       <div className="mb-5">
         <p className="bg-[#CEFFE0] text-[#0D5F2B] rounded-full w-fit mx-auto px-5 py-2 text-lg font-semibold">
           Team Members
@@ -95,6 +95,8 @@ const TeamSection = () => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-linear-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-linear-to-l from-white to-transparent z-10 pointer-events-none"></div>
         <motion.div
           ref={containerRef}
           className="flex w-max cursor-grab active:cursor-grabbing touch-pan-y py-5"

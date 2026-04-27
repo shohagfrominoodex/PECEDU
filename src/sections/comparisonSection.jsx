@@ -1,70 +1,124 @@
-import { Check, X } from "lucide-react";
+import { ArrowRight, CheckLine, CirclePlus, Layers, X } from "lucide-react";
+import Link from "next/link";
 
-const services = [
-  "Authorized by International Universities",
-  "Global Sim Card",
-  "Part time Job Assistance",
-  "Airport Pickup",
-  "Health Insurance",
-  "Internship Placement",
-  "International Payment Services (Card/Bank Transfer)",
-  "UK Bank Account Support",
-  "Cheap Air Ticket",
-  "IELTS Registration Cashback",
-  "Gift Hamper",
-  "Free Assessment",
+const FEATURES = [
+  {
+    label: "Authorised by International Universities",
+    others: false,
+    edu: true,
+  },
+  { label: "Global SIM Card on Arrival", others: false, edu: true },
+  { label: "Part-time Job Assistance", others: false, edu: true },
+  { label: "Airport Pickup", others: false, edu: true },
+  { label: "Health Insurance Guidance", others: false, edu: true },
+  { label: "Internship Placement Support", others: false, edu: true },
+  { label: "International Payment Services", others: false, edu: true },
+  { label: "UK Bank Account Setup", others: false, edu: true },
+  { label: "Cheap Air Ticket Assistance", others: false, edu: true },
+  { label: "IELTS Registration Cashback", others: false, edu: true },
+  { label: "Welcome Gift Hamper", others: false, edu: true },
+  { label: "Free Eligibility Assessment", others: true, edu: true },
 ];
 
-const ComparisonSection = () => {
+export default function WhyChooseSection() {
   return (
-    <section className="py-20 px-4 bg-background">
-      <div className="container max-w-5xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Why Choose <span className="text-primary">Eduvisors</span>
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            See how we compare to other consultancies
+    <section className="py-20 px-6">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-10">
+          <p className="bg-[#CEFFE0] text-[#0D5F2B] rounded-full w-fit mx-auto px-5 py-2 text-lg font-semibold">
+            Comparison
           </p>
+          <h1 className="text-4xl text-center my-4 font-semibold">
+            See How We Compare
+          </h1>
         </div>
 
-        <div className="rounded-2xl border border-border bg-card shadow-lg overflow-hidden">
-          {/* Header */}
-          <div className="grid grid-cols-3 bg-muted/50 border-b border-border">
-            <div className="p-5 md:p-6 font-semibold text-foreground text-sm md:text-base">
-              Services
+        <div className="grid grid-cols-2 gap-4">
+          <div className="rounded-2xl border border-[#e0ddd6] overflow-hidden">
+            <div className="bg-white px-5 py-4 flex items-center gap-3">
+              <div className="w-9 h-9 rounded-xl bg-[#f0ede8] flex items-center justify-center shrink-0">
+                <CirclePlus strokeWidth={1} />
+              </div>
+              <div>
+                <p className="text-[13px] font-semibold text-[#444]">
+                  Other Consultancy
+                </p>
+                <p className="text-[10px] text-[#bbb] font-medium tracking-wide uppercase">
+                  Standard
+                </p>
+              </div>
             </div>
-            <div className="p-5 md:p-6 font-semibold text-center text-muted-foreground text-sm md:text-base border-l border-border">
-              Other Consultancy
-            </div>
-            <div className="p-5 md:p-6 font-semibold text-center text-primary text-sm md:text-base border-l border-border bg-primary/5">
-              Eduvisors
-            </div>
+            {FEATURES.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-white hover:bg-black/5 px-5 flex items-center border-t border-[#e0ddd6] gap-4"
+              >
+                <div className="text-[10px] text-[#bbb] font-medium tracking-wide uppercase">
+                  {feature.others ? (
+                    <div className="bg-[#0D5F2B] w-fit rounded-full p-1 my-3 ">
+                      <CheckLine stroke="white" size={14} />
+                    </div>
+                  ) : (
+                    <div className="bg-red-500/80 w-fit rounded-full p-1 my-3">
+                      <X stroke="white" size={14} />
+                    </div>
+                  )}
+                </div>
+                <p className="text-[13px] font-semibold text-[#444]">
+                  {feature.label}
+                </p>
+              </div>
+            ))}
           </div>
 
-          {/* Rows */}
-          {services.map((service, idx) => (
-            <div
-              key={service}
-              className={`grid grid-cols-3 transition-colors hover:bg-muted/30 ${
-                idx !== services.length - 1 ? "border-b border-border" : ""
-              }`}
-            >
-              <div className="p-4 md:p-5 text-foreground text-sm md:text-base font-medium flex items-center">
-                {service}
+          <div className="rounded-2xl border-2 border-[#1a3a2a] overflow-hidden">
+            <div className="bg-[#1a3a2a] px-5 py-4 flex items-center gap-3">
+              <div className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+                <Layers strokeWidth={1} stroke="#FFF" />
               </div>
-              <div className="p-4 md:p-5 border-l border-border flex items-center justify-center">
-                <X className="w-7 h-7 text-destructive" strokeWidth={4} />
-              </div>
-              <div className="p-4 md:p-5 border-l border-border bg-primary/5 flex items-center justify-center">
-                <Check className="w-7 h-7 text-primary" strokeWidth={4} />
+              <div>
+                <p className="text-[13px] font-semibold text-white">Pec Edu</p>
+                <p className="text-[10px] text-[#7ec99e] font-bold tracking-wide uppercase">
+                  ✦ Recommended
+                </p>
               </div>
             </div>
-          ))}
+            <div className="bg-linear-150 from-[#1A3A2A] to-[#0D5F2B]">
+              {FEATURES.map((feature, index) => (
+                <div
+                  key={index}
+                  className="hover:bg-white/5 px-5 flex items-center border-t border-white/30 gap-4"
+                >
+                  <div className="text-[10px] text-[#bbb] font-medium tracking-wide uppercase">
+                    {feature.edu ? (
+                      <div className="bg-[#0D5F2B] w-fit rounded-full p-1 my-3">
+                        <CheckLine stroke="white" size={14} />
+                      </div>
+                    ) : (
+                      <div className="bg-red-500/80 w-fit rounded-full p-1 my-3">
+                        <X stroke="white" size={14} />
+                      </div>
+                    )}
+                  </div>
+                  <p className="text-[13px] font-semibold text-white">
+                    {feature.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center mt-10">
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 bg-[#1a3a2a] text-white text-sm font-semibold px-7 py-3.5 rounded-full hover:bg-[#2a5a3a] transition-colors duration-200"
+          >
+            Book Free Consultation
+            <ArrowRight size={18} />
+          </Link>
         </div>
       </div>
     </section>
   );
-};
-
-export default ComparisonSection;
+}
