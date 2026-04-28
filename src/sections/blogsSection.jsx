@@ -27,7 +27,7 @@ export default function BlogsSection() {
     },
   ];
   return (
-    <section className="max-w-[1440px] mx-auto my-10">
+    <section className="max-w-7xl mx-auto my-10">
       <section>
         <p className="bg-[#CEFFE0] text-[#0D5F2B] rounded-full w-fit mx-auto px-5 py-2 text-lg font-semibold">
           Blogs

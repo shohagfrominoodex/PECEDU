@@ -58,7 +58,7 @@ export default function ServicesSection() {
       id="services"
       className="bg-linear-to-b from-[#CEFFE0] to-white py-20 px-2"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center md:justify-between gap-6 mb-12">
           <div>
             <p className="bg-white text-[#0D5F2B] rounded-full w-fit mx-auto px-5 py-2 text-lg font-semibold">

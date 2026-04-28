@@ -10,8 +10,8 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <section className="bg-black/90 text-white py-10">
-      <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        <section className="border-r border-white/50 mr-8">
+      <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-12">
+        <section className="border-r border-white/50 mr-8 col-span-4">
           <Image src="/logo/pecedu.webp" alt="logo" width={100} height={100} />
           <p className="text-gray-200 text-lg font-normal mt-5 w-80">
             Eduvisors is a leading educational consultancy firm that helps
@@ -35,7 +35,7 @@ export default function Footer() {
             </Link>
           </div>
         </section>
-        <section className="border-r border-white/50 mr-8">
+        <section className="border-r border-white/50 mr-8 col-span-2">
           <h2 className="text-2xl font-semibold">Quick Links</h2>
           <section className="mt-5 flex flex-col space-y-2">
             <Link href={"/"}>Home</Link>
@@ -47,7 +47,7 @@ export default function Footer() {
             <Link href={"/contact"}>Contact</Link>
           </section>
         </section>
-        <section className="border-r border-white/50 mr-8">
+        <section className="border-r border-white/50 mr-8 col-span-3">
           <h2 className="text-2xl font-semibold">Popular University</h2>
           <section className="mt-5 flex flex-col space-y-2">
             <Link
@@ -118,7 +118,7 @@ export default function Footer() {
             </Link>
           </section>
         </section>
-        <section>
+        <section className="col-span-3">
           <h2 className="text-2xl font-semibold">Need Help?</h2>
           <div className="flex flex-col gap-2 mt-5">
             <div className="flex items-center gap-2">
@@ -146,8 +146,8 @@ export default function Footer() {
           </section>
         </section>
       </section>
-      <hr className="border-white/50 container mx-auto my-10" />
-      <section className="container mx-auto">
+      <hr className="border-white/50 max-w-7xl mx-auto my-10" />
+      <section className="max-w-7xl mx-auto">
         <p className="text-center text-gray-400">
           &copy; {new Date().getFullYear()}{" "}
           <Link href="/" className="hover:text-white">

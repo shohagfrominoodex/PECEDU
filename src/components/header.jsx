@@ -1,15 +1,19 @@
 "use client";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import {
   MdKeyboardArrowDown,
   MdKeyboardArrowRight,
   MdKeyboardArrowUp,
 } from "react-icons/md";
+import Button from "./button";
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
   return (
-    <section className="flex items-center justify-between border border-b-[#11613C]/20 backdrop-blur-lg shadow-lg px-10 py-1 mx-auto">
+    <section className="flex items-center justify-between backdrop-blur-lg shadow-lg xl:px-10 lg:px-5 px-2 py-1 mx-auto">
       <section>
         <Link href={"/"}>
           <Image
@@ -21,7 +25,7 @@ export default function Header() {
           />
         </Link>
       </section>
-      <nav className="flex items-center gap-5 font-normal">
+      <nav className="items-center gap-5 font-normal text-sm xl:text-base hidden lg:flex">
         <Link href={"/"}>Home</Link>
         <div className="group relative">
           <Link href={"/about"} className="flex items-center gap-1">
@@ -223,13 +227,54 @@ export default function Header() {
         </Link>
         <Link href={"/contact"}>Contact</Link>
       </nav>
-      <section>
+      <section className="hidden lg:block">
         <Link
           href={"/apply-now"}
           className="bg-[#0D5F2B] hover:bg-white/80 flex hover:text-black/80 hover:shadow-lg duration-300 hover:scale-102 px-4 py-2.5 rounded-full text-white text-sm font-semibold"
         >
           Apply Now
         </Link>
+      </section>
+      <section
+        onClick={() => setOpen(!open)}
+        className="lg:hidden cursor-pointer"
+      >
+        {open ? <X /> : <Menu />}
+        <div className="relative">
+          {open && (
+            <div className="absolute top-1 right-1 border bg-white p-5 rounded-2xl border-black/20">
+              <nav className="flex flex-col space-y-2">
+                <Link className="text-nowrap" href={"/"}>
+                  Home
+                </Link>
+                <Link className="text-nowrap" href={"/about"}>
+                  About
+                </Link>
+                <Link className="text-nowrap" href={"/study-abroad"}>
+                  Study Abroad
+                </Link>
+                <Link className="text-nowrap" href={"/resources"}>
+                  Resources
+                </Link>
+                <Link className="text-nowrap" href={"/events"}>
+                  Events
+                </Link>
+                <Link className="text-nowrap" href={"/universities"}>
+                  Popular University
+                </Link>
+                <Link className="text-nowrap" href={"/contact"}>
+                  Contact
+                </Link>
+                <Link
+                  href={"/apply-now"}
+                  className="bg-[#0D5F2B] hover:bg-white/80 justify-center flex hover:text-black/80 hover:shadow-lg duration-300 hover:scale-102 px-4 py-2.5 rounded-full text-white text-sm font-semibold"
+                >
+                  Apply Now
+                </Link>
+              </nav>
+            </div>
+          )}
+        </div>
       </section>
     </section>
   );

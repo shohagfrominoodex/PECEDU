@@ -76,7 +76,7 @@ const TeamSection = () => {
   };
 
   return (
-    <section className="max-w-[1440px] mx-auto my-10 overflow-hidden relative">
+    <section className="max-w-7xl mx-auto my-10 overflow-hidden relative">
       <div className="mb-5">
         <p className="bg-[#CEFFE0] text-[#0D5F2B] rounded-full w-fit mx-auto px-5 py-2 text-lg font-semibold">
           Team Members
