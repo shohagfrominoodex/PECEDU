@@ -24,14 +24,17 @@ body {
   color: var(--foreground);
   font-family: "Chivo", sans-serif;
 }
+
 @keyframes marquee-rl {
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-50%);
   }
 }
+
 .animate-marquee-rl {
   animation: marquee-rl 20s linear infinite;
 }
@@ -40,10 +43,12 @@ body {
   0% {
     transform: translateX(-50%);
   }
+
   100% {
     transform: translateX(0%);
   }
 }
+
 .animate-marquee-lr {
   animation: marquee-lr 20s linear infinite;
 }
@@ -57,10 +62,12 @@ body {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
 .animate-spin-slow {
   animation: spin-slow 30s linear infinite;
 }
@@ -69,10 +76,12 @@ body {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(-360deg);
   }
 }
+
 .animate-spin-reverse {
   animation: spin-reverse 30s linear infinite;
 }

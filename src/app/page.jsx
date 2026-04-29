@@ -1,27 +1,27 @@
-import AboutSection from "@/sections/about";
-import BenefitSection from "@/sections/benefitSection";
-import BlogsSection from "@/sections/blogsSection";
-import ComparisonSection from "@/sections/comparisonSection";
+import AboutSection from "@/sections/aboutSection";
+import BenefitsSection from "@/sections/benefitSection";
+import BlogSection from "@/sections/blogsSection";
 import GlobalClients from "@/sections/globalClientSection";
-import HeroAnimation from "@/sections/heroSection";
+import HeroAnimation from "@/sections/heroAnimation";
 import PartnerSection from "@/sections/partnerSection";
+import ServicesSection from "@/sections/servicesSection";
 import TeamSection from "@/sections/teamSection";
-import WhatWeDo from "@/sections/whatWeDo";
+import WhyChooseUs from "@/sections/whyChooseUsSection";
 
 const page = () => {
-  return (
-    <div>
-      <HeroAnimation />
-      <AboutSection />
-      <BenefitSection />
-      <GlobalClients />
-      <TeamSection />
-      <WhatWeDo />
-      <ComparisonSection />
-      <PartnerSection />
-      <BlogsSection />
-    </div>
-  );
+     return (
+          <div>
+               <HeroAnimation />
+               <BenefitsSection />
+               <AboutSection />
+               <WhyChooseUs />
+               <GlobalClients />
+               <BlogSection />
+               <PartnerSection />
+               <TeamSection />
+               <ServicesSection />
+          </div>
+     );
 };
 
 export default page;

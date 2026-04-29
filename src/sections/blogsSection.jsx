@@ -1,53 +1,85 @@
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { Calendar, ArrowUpRight, MoveUpRight } from "lucide-react";
+import Image from "next/image";
 import Blog from "@/components/blog";
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-export default function BlogsSection() {
-  const blogs = [
-    {
-      id: 1,
-      title: "How to Prepare for the PTE Exam",
-      image: "/blogs/image-1.webp",
-      description: "Learn the best strategies to prepare for the PTE exam.",
-      date: "2022-01-01",
-    },
-    {
-      id: 2,
-      title: "Top 10 Tips for PTE Success",
-      image: "/blogs/image-1.webp",
-      description: "Expert tips to help you ace your PTE exam.",
-      date: "2022-01-02",
-    },
-    {
-      id: 3,
-      title: "Common Mistakes to Avoid in PTE",
-      image: "/blogs/image-1.webp",
-      description: "Avoid these common pitfalls to improve your score.",
-      date: "2022-01-03",
-    },
-  ];
-  return (
-    <section className="max-w-7xl mx-auto my-10">
-      <section>
-        <p className="bg-[#CEFFE0] text-[#0D5F2B] rounded-full w-fit mx-auto px-5 py-2 text-lg font-semibold">
-          Blogs
-        </p>
-        <h2 className="text-4xl font-bold text-center mt-3">Latest Blogs</h2>
-      </section>
-      <section className="grid grid-cols-3 gap-5 mt-10">
-        {blogs.map((blog) => (
-          <Blog key={blog.id} blog={blog} />
-        ))}
-      </section>
-      <div className="flex justify-center">
-        <Link
-          href={"/blogs"}
-          className="bg-[#0D5F2B] flex items-center gap-2 hover:bg-white/80 mt-5 hover:text-black/80 hover:shadow-lg duration-300 hover:scale-102 px-4 py-2.5 rounded-full text-white text-sm font-semibold"
-        >
-          View All Blogs
-          <ArrowRight size={20} />
-        </Link>
-      </div>
-    </section>
-  );
-}
+const blogPosts = [
+     {
+          id: 1,
+          title: "Mastering Next.js 14 and Modern UI Trends",
+          category: "Development",
+          date: "April 28, 2026",
+          image: "/images/benefits.png.webp",
+     },
+     {
+          id: 2,
+          title: "Why Glassmorphism is Dominating Digital Design",
+          category: "UI/UX Design",
+          date: "April 25, 2026",
+          image: "/images/benefits.png.webp",
+     },
+     {
+          id: 3,
+          title: "Optimizing Web Performance for 2026 Standards",
+          category: "Optimization",
+          date: "April 20, 2026",
+          image: "/images/benefits.png.webp",
+     },
+];
+
+const BlogSection = () => {
+     return (
+          <section className="py-24 px-4 bg-[#050505]">
+               <div className="container mx-auto">
+                    <div className="flex flex-col md:flex-row justify-between items-end mb-5 gap-5">
+                         <motion.div
+                              initial={{ opacity: 0, x: -30 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              transition={{ duration: 0.6 }}
+                              className="w-full text-start md:text-center"
+                         >
+                              <motion.h1
+                                   initial={{ opacity: 0, y: 20 }}
+                                   animate={{ opacity: 1, y: 0 }}
+                                   transition={{ duration: 0.5, delay: 0.2 }}
+                                   className="text-3xl md:text-5xl font-bold tracking-tight mb-6 bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent"
+                              >
+                                   Latest Information <br /> by PecEdu
+                              </motion.h1>
+
+                              <motion.p
+                                   initial={{ opacity: 0, y: 20 }}
+                                   animate={{ opacity: 1, y: 0 }}
+                                   transition={{ duration: 0.5, delay: 0.4 }}
+                                   className="max-w-2xl md:mx-auto text-lg text-gray-400 mb-10 leading-relaxed"
+                              >
+                                   Get expertly curated information on studying
+                                   abroad from Bangladesh, including tips,
+                                   updates, and experiences.
+                              </motion.p>
+                         </motion.div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                         {blogPosts.map((post, idx) => (
+                              <Blog key={idx} blog={post} />
+                         ))}
+                    </div>
+                    <div className="flex justify-center mt-10 text-white">
+                         <Link
+                              className="px-5 py-2 bg-white/5 border flex items-center gap-2 border-white/10 backdrop-blur-lg font-semibold rounded-xl hover:bg-white/10 transition-all"
+                              href={"/blogs"}
+                         >
+                              See More Blogs
+                              <MoveUpRight size={14} />
+                         </Link>
+                    </div>
+               </div>
+          </section>
+     );
+};
+
+export default BlogSection;

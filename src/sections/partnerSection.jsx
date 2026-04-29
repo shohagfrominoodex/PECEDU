@@ -1,110 +1,100 @@
-import Image from "next/image";
-import Link from "next/link";
+"use client";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import Partner from "@/components/partner";
 
-export default function PartnerSection() {
-  const partners = [
-    {
-      id: 1,
-      src: "/partners/Eduvisors-Logo.webp",
-      url: "https://www.eduvisors.com/",
-    },
-    {
-      id: 2,
-      src: "/partners/Eduvisors-Logo.webp",
-      url: "https://www.eduvisors.com/",
-    },
-    {
-      id: 3,
-      src: "/partners/Eduvisors-Logo.webp",
-      url: "https://www.eduvisors.com/",
-    },
-    {
-      id: 4,
-      src: "/partners/Eduvisors-Logo.webp",
-      url: "https://www.eduvisors.com/",
-    },
-    {
-      id: 5,
-      src: "/partners/Eduvisors-Logo.webp",
-      url: "https://www.eduvisors.com/",
-    },
-    {
-      id: 6,
-      src: "/partners/Eduvisors-Logo.webp",
-      url: "https://www.eduvisors.com/",
-    },
-    {
-      id: 7,
-      src: "/partners/Eduvisors-Logo.webp",
-      url: "https://www.eduvisors.com/",
-    },
-    {
-      id: 8,
-      src: "/partners/Eduvisors-Logo.webp",
-      url: "https://www.eduvisors.com/",
-    },
-  ];
-  return (
-    <section className="max-w-7xl mx-auto my-10 overflow-hidden">
-      <div className="text-center">
-        <h1 className="text-3xl bg-linear-to-r from-[#0E602B] to-[#61CD70] bg-clip-text text-transparent font-bold mb-4">
-          Our Partners
-        </h1>
-        <p className="text-lg font-medium">
-          We are proud to partner with some of the best universities and
-          organizations in the world.
-        </p>
-      </div>
+const partners = [
+     {
+          name: "Google",
+          logo: "/partners/Eduvisors-Logo.webp",
+          url: "https://eduvisors.com/",
+     },
+     {
+          name: "Microsoft",
+          logo: "/partners/Eduvisors-Logo.webp",
+          url: "https://eduvisors.com/",
+     },
+     {
+          name: "Meta",
+          logo: "/partners/Eduvisors-Logo.webp",
+          url: "https://eduvisors.com/",
+     },
+     {
+          name: "Amazon",
+          logo: "/partners/Eduvisors-Logo.webp",
+          url: "https://eduvisors.com/",
+     },
+     {
+          name: "Netflix",
+          logo: "/partners/Eduvisors-Logo.webp",
+          url: "https://eduvisors.com/",
+     },
+     {
+          name: "Apple",
+          logo: "/partners/Eduvisors-Logo.webp",
+          url: "https://eduvisors.com/",
+     },
+];
 
-      <div className="relative flex overflow-hidden group">
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-linear-to-r from-white to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-linear-to-l from-white to-transparent z-10 pointer-events-none"></div>
+const doubledPartners = [...partners, ...partners];
 
-        <div className="flex w-max animate-marquee-rl">
-          <div className="flex gap-5 pr-5">
-            {partners.map((partner) => (
-              <div
-                key={partner.id}
-                className="p-2 flex items-center justify-center w-64 h-32 shrink-0 transition-transform duration-300 hover:scale-105 cursor-pointer"
-              >
-                <Link href={`${partner.url}`} target="_blank">
-                  <Image
-                    src={partner.src}
-                    alt={partner.src}
-                    width={500}
-                    height={200}
-                  />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+const PartnerSection = () => {
+     const [isPaused, setIsPaused] = useState(false);
 
-      <div className="relative flex overflow-hidden group">
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-linear-to-r from-white to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-linear-to-l from-white to-transparent z-10 pointer-events-none"></div>
+     return (
+          <section className="py-20 bg-[#0a0a0a] overflow-hidden">
+               <div className="max-w-7xl mx-auto px-6 mb-10 text-center">
+                    <h2 className="text-white/60 uppercase bg-white/10 w-fit mx-auto px-4 py-2 rounded-full tracking-widest text-sm font-bold">
+                         Trusted Partners
+                    </h2>
+               </div>
 
-        <div className="flex w-max animate-marquee-lr">
-          <div className="flex gap-5 pr-5">
-            {partners.map((partner) => (
-              <div
-                key={partner.id}
-                className="p-2 flex items-center justify-center w-64 h-32 shrink-0 transition-transform duration-300 hover:scale-105 cursor-pointer"
-              >
-                <Link href={`${partner.url}`} target="_blank">
-                  <Image
-                    src={partner.src}
-                    alt={partner.src}
-                    width={500}
-                    height={200}
-                  />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+               <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="w-full text-start md:text-center"
+               >
+                    <motion.h1
+                         initial={{ opacity: 0, y: 20 }}
+                         animate={{ opacity: 1, y: 0 }}
+                         transition={{ duration: 0.5, delay: 0.2 }}
+                         className="text-3xl md:text-5xl font-bold tracking-tight mb-6 md:px-10 lg:px-0 px-4 bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent"
+                    >
+                         Some Top Ranked <br /> Global Universities {"We're"}{" "}
+                         Working with
+                    </motion.h1>
+               </motion.div>
+
+               <div className="relative flex overflow-hidden py-12 border-y border-white/5">
+                    <div className="absolute inset-y-0 left-0 w-40 bg-linear-to-r from-[#0a0a0a] to-transparent z-10" />
+                    <div className="absolute inset-y-0 right-0 w-40 bg-linear-to-l from-[#0a0a0a] to-transparent z-10" />
+
+                    <motion.div
+                         className="flex gap-12 flex-nowrap w-fit cursor-pointer"
+                         animate={
+                              isPaused
+                                   ? { x: undefined }
+                                   : { x: ["0%", "-50%"] }
+                         }
+                         transition={{
+                              x: {
+                                   repeat: Infinity,
+                                   repeatType: "loop",
+                                   duration: 30,
+                                   ease: "linear",
+                              },
+                         }}
+                         onMouseEnter={() => setIsPaused(true)}
+                         onMouseLeave={() => setIsPaused(false)}
+                    >
+                         {doubledPartners.map((partner, idx) => (
+                              <Partner key={idx} partner={partner} />
+                         ))}
+                    </motion.div>
+               </div>
+          </section>
+     );
+};
+
+export default PartnerSection;
