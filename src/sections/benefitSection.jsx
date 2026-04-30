@@ -31,7 +31,7 @@ const BenefitSection = () => {
     ];
 
     return (
-        <section className="max-w-7xl mx-auto my-30">
+        <section className="max-w-7xl mx-auto my-30 px-4">
             <h1 className="bg-clip-text text-transparent bg-linear-to-r from-[#0E602B] to-[#61CD70] text-center text-5xl font-semibold">
                 We Help Individual Become their Best Version
             </h1>
