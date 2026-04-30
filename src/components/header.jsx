@@ -5,241 +5,249 @@ import { ChevronDown, Menu, MoveUpRight, X } from "lucide-react";
 import Link from "next/link";
 
 const navData = [
-     { name: "Home", href: "#" },
-     {
-          name: "About",
-          href: "#",
-          children: [
-               { name: "Our Mission", href: "#" },
-               { name: "Our Team", href: "#" },
-               { name: "Gallery", href: "#" },
-          ],
-     },
-     {
-          name: "Study Abroad",
-          href: "#",
-          children: [
-               { name: "UK", href: "#" },
-               { name: "USA", href: "#" },
-               { name: "Canada", href: "#" },
-               { name: "Australia", href: "#" },
-          ],
-     },
-     { name: "Resources", href: "#" },
-     { name: "Events", href: "#" },
-     { name: "Contact", href: "#" },
+    { name: "Home", href: "/" },
+    {
+        name: "About",
+        href: "about",
+        children: [
+            { name: "Our Mission", href: "#" },
+            { name: "Our Team", href: "#" },
+            { name: "Gallery", href: "#" },
+        ],
+    },
+    {
+        name: "Study Abroad",
+        href: "study-abroad",
+        children: [
+            { name: "Study in the Signapore", href: "#" },
+            { name: "Study in the China", href: "#" },
+            { name: "Study in the Japan", href: "#" },
+            { name: "Study in the South Korea", href: "#" },
+            { name: "Study in the Malaysia", href: "#" },
+        ],
+    },
+    {
+        name: "Resources",
+        href: "resources",
+        children: [
+            { name: "UK", href: "#" },
+            { name: "USA", href: "#" },
+            { name: "Canada", href: "#" },
+            { name: "Australia", href: "#" },
+        ],
+    },
+    { name: "Events", href: "events" },
+
+    {
+        name: "Popular University",
+        href: "universities",
+        children: [
+            { name: "National University of Singapore", href: "#" },
+            {
+                name: "University of Science and Technology of China",
+                href: "#",
+            },
+            { name: "University of Tokyo", href: "#" },
+            { name: "Seoul National University", href: "#" },
+            { name: "University of Malaya", href: "#" },
+            { name: "Singapore University of Social Sciences", href: "#" },
+        ],
+    },
+    { name: "Contact", href: "contact" },
 ];
 
 const Navbar = () => {
-     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-     const [activeDropdown, setActiveDropdown] = useState(null);
-     const [mobileExpanded, setMobileExpanded] = useState(null);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [activeDropdown, setActiveDropdown] = useState(null);
+    const [mobileExpanded, setMobileExpanded] = useState(null);
 
-     const toggleMobileDropdown = (idx) => {
-          setMobileExpanded(mobileExpanded === idx ? null : idx);
-     };
+    const toggleMobileDropdown = (idx) => {
+        setMobileExpanded(mobileExpanded === idx ? null : idx);
+    };
 
-     return (
-          <nav className="fixed w-full z-50 top-4 px-4 sm:px-8">
-               <div className="max-w-7xl mx-auto relative">
-                    <div className="flex items-center justify-between px-4 py-3 rounded-2xl border border-white/20 backdrop-blur-xl bg-white/10 shadow-2xl">
-                         <div className="flex items-center gap-2">
-                              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center font-bold text-[#0b5d2e] text-xl shadow-inner">
-                                   P
-                              </div>
-                              <span className="font-bold text-lg text-white hidden sm:block">
-                                   PecEdu Global
-                              </span>
-                         </div>
+    return (
+        <nav className="fixed w-full z-50 top-4 px-4 sm:px-8">
+            <div className="container mx-auto relative">
+                <div className="flex items-center justify-between px-4 py-3 rounded-2xl border border-white/20 backdrop-blur-xl bg-white/10 shadow-2xl">
+                    <div className="flex items-center gap-2">
+                        <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center font-bold text-[#0b5d2e] text-xl shadow-inner">
+                            P
+                        </div>
+                        <span className="font-bold text-lg text-white hidden sm:block">
+                            PecEdu
+                        </span>
+                    </div>
 
-                         <div className="hidden lg:flex items-center gap-8">
-                              {navData.map((item, idx) => (
-                                   <div
+                    <div className="hidden lg:flex items-center lg:gap-4 xl:gap-8">
+                        {navData.map((item, idx) => (
+                            <div
+                                key={idx}
+                                className="relative group"
+                                onMouseEnter={() => setActiveDropdown(idx)}
+                                onMouseLeave={() => setActiveDropdown(null)}
+                            >
+                                <Link
+                                    href={item.href}
+                                    className="flex items-center gap-1 text-sm font-medium text-white/90 hover:text-white transition-all py-2"
+                                >
+                                    {item.name}
+                                    {item.children && (
+                                        <ChevronDown
+                                            size={14}
+                                            className={`transition-transform duration-300 ${activeDropdown === idx ? "rotate-180" : ""}`}
+                                        />
+                                    )}
+                                </Link>
+
+                                <AnimatePresence>
+                                    {item.children &&
+                                        activeDropdown === idx && (
+                                            <motion.div
+                                                initial={{
+                                                    opacity: 0,
+                                                    y: 10,
+                                                    scale: 0.95,
+                                                }}
+                                                animate={{
+                                                    opacity: 1,
+                                                    y: 0,
+                                                    scale: 1,
+                                                }}
+                                                exit={{
+                                                    opacity: 0,
+                                                    y: 10,
+                                                    scale: 0.95,
+                                                }}
+                                                className="absolute top-full left-0 mt-2 w-56 bg-white/95 backdrop-blur-2xl rounded-xl shadow-2xl border border-white/20 p-2"
+                                            >
+                                                {item?.children?.map(
+                                                    (child, cIdx) => (
+                                                        <Link
+                                                            key={cIdx}
+                                                            href={child.href}
+                                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-[#0b5d2e] rounded-lg transition-colors"
+                                                        >
+                                                            {child.name}
+                                                        </Link>
+                                                    ),
+                                                )}
+                                            </motion.div>
+                                        )}
+                                </AnimatePresence>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="hidden lg:block">
+                        <Link
+                            href={"/apply-now"}
+                            className="px-4 flex items-center gap-1 py-2.5 bg-white/10 text-white rounded-xl font-medium text-sm hover:bg-white/20 transition-all transform hover:scale-105 shadow-lg shadow-green-900/20"
+                        >
+                            Apply Now
+                        </Link>
+                    </div>
+
+                    <button
+                        className="lg:hidden text-white p-2"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    >
+                        {isMobileMenuOpen ? (
+                            <X size={28} />
+                        ) : (
+                            <Menu size={28} />
+                        )}
+                    </button>
+                </div>
+
+                <AnimatePresence>
+                    {isMobileMenuOpen && (
+                        <motion.div
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            className="absolute top-full left-0 right-0 mt-3 lg:hidden bg-white/90 backdrop-blur-2xl rounded-3xl border border-white/30 shadow-2xl overflow-hidden p-4"
+                        >
+                            <div className="flex flex-col gap-2">
+                                {navData.map((item, idx) => (
+                                    <div
                                         key={idx}
-                                        className="relative group"
-                                        onMouseEnter={() =>
-                                             setActiveDropdown(idx)
-                                        }
-                                        onMouseLeave={() =>
-                                             setActiveDropdown(null)
-                                        }
-                                   >
-                                        <button className="flex items-center gap-1 text-sm font-medium text-white/90 hover:text-white transition-all py-2">
-                                             {item.name}
-                                             {item.children && (
-                                                  <ChevronDown
-                                                       size={14}
-                                                       className={`transition-transform duration-300 ${activeDropdown === idx ? "rotate-180" : ""}`}
-                                                  />
-                                             )}
+                                        className="border-b border-gray-100 last:border-0"
+                                    >
+                                        <button
+                                            onClick={() =>
+                                                item.children
+                                                    ? toggleMobileDropdown(idx)
+                                                    : null
+                                            }
+                                            className="w-full flex items-center justify-between py-4 px-2 text-gray-800 font-semibold"
+                                        >
+                                            {item.name}
+                                            {item.children && (
+                                                <ChevronDown
+                                                    size={18}
+                                                    className={`transition-transform ${mobileExpanded === idx ? "rotate-180" : ""}`}
+                                                />
+                                            )}
                                         </button>
 
                                         <AnimatePresence>
-                                             {item.children &&
-                                                  activeDropdown === idx && (
-                                                       <motion.div
-                                                            initial={{
-                                                                 opacity: 0,
-                                                                 y: 10,
-                                                                 scale: 0.95,
-                                                            }}
-                                                            animate={{
-                                                                 opacity: 1,
-                                                                 y: 0,
-                                                                 scale: 1,
-                                                            }}
-                                                            exit={{
-                                                                 opacity: 0,
-                                                                 y: 10,
-                                                                 scale: 0.95,
-                                                            }}
-                                                            className="absolute top-full left-0 mt-2 w-56 bg-white/95 backdrop-blur-2xl rounded-xl shadow-2xl border border-white/20 p-2"
-                                                       >
+                                            {item.children &&
+                                                mobileExpanded === idx && (
+                                                    <motion.div
+                                                        initial={{
+                                                            height: 0,
+                                                            opacity: 0,
+                                                        }}
+                                                        animate={{
+                                                            height: "auto",
+                                                            opacity: 1,
+                                                        }}
+                                                        exit={{
+                                                            height: 0,
+                                                            opacity: 0,
+                                                        }}
+                                                        className="overflow-hidden bg-gray-50/50 rounded-xl mb-2"
+                                                    >
+                                                        <div className="flex flex-col py-2 px-4 gap-3">
                                                             {item.children.map(
-                                                                 (
-                                                                      child,
-                                                                      cIdx,
-                                                                 ) => (
-                                                                      <a
-                                                                           key={
-                                                                                cIdx
-                                                                           }
-                                                                           href={
-                                                                                child.href
-                                                                           }
-                                                                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-[#0b5d2e] rounded-lg transition-colors"
-                                                                      >
-                                                                           {
-                                                                                child.name
-                                                                           }
-                                                                      </a>
-                                                                 ),
+                                                                (
+                                                                    child,
+                                                                    cIdx,
+                                                                ) => (
+                                                                    <a
+                                                                        key={
+                                                                            cIdx
+                                                                        }
+                                                                        href={
+                                                                            child.href
+                                                                        }
+                                                                        className="text-gray-600 text-sm py-1 hover:text-[#0b5d2e]"
+                                                                    >
+                                                                        {
+                                                                            child.name
+                                                                        }
+                                                                    </a>
+                                                                ),
                                                             )}
-                                                       </motion.div>
-                                                  )}
+                                                        </div>
+                                                    </motion.div>
+                                                )}
                                         </AnimatePresence>
-                                   </div>
-                              ))}
-                         </div>
-
-                         <div className="hidden lg:block">
-                              <Link
-                                   href={"/apply-now"}
-                                   className="px-4 flex items-center gap-1 py-2.5 bg-white/10 text-white rounded-xl font-semibold hover:bg-white/20 transition-all transform hover:scale-105 shadow-lg shadow-green-900/20"
-                              >
-                                   Apply Now
-                                   <span className="bg-white/15 p-1 rounded-full">
-                                        <MoveUpRight size={14} />
-                                   </span>
-                              </Link>
-                         </div>
-
-                         <button
-                              className="lg:hidden text-white p-2"
-                              onClick={() =>
-                                   setIsMobileMenuOpen(!isMobileMenuOpen)
-                              }
-                         >
-                              {isMobileMenuOpen ? (
-                                   <X size={28} />
-                              ) : (
-                                   <Menu size={28} />
-                              )}
-                         </button>
-                    </div>
-
-                    <AnimatePresence>
-                         {isMobileMenuOpen && (
-                              <motion.div
-                                   initial={{ opacity: 0, y: -20 }}
-                                   animate={{ opacity: 1, y: 0 }}
-                                   exit={{ opacity: 0, y: -20 }}
-                                   className="absolute top-full left-0 right-0 mt-3 lg:hidden bg-white/90 backdrop-blur-2xl rounded-3xl border border-white/30 shadow-2xl overflow-hidden p-4"
-                              >
-                                   <div className="flex flex-col gap-2">
-                                        {navData.map((item, idx) => (
-                                             <div
-                                                  key={idx}
-                                                  className="border-b border-gray-100 last:border-0"
-                                             >
-                                                  <button
-                                                       onClick={() =>
-                                                            item.children
-                                                                 ? toggleMobileDropdown(
-                                                                        idx,
-                                                                   )
-                                                                 : null
-                                                       }
-                                                       className="w-full flex items-center justify-between py-4 px-2 text-gray-800 font-semibold"
-                                                  >
-                                                       {item.name}
-                                                       {item.children && (
-                                                            <ChevronDown
-                                                                 size={18}
-                                                                 className={`transition-transform ${mobileExpanded === idx ? "rotate-180" : ""}`}
-                                                            />
-                                                       )}
-                                                  </button>
-
-                                                  <AnimatePresence>
-                                                       {item.children &&
-                                                            mobileExpanded ===
-                                                                 idx && (
-                                                                 <motion.div
-                                                                      initial={{
-                                                                           height: 0,
-                                                                           opacity: 0,
-                                                                      }}
-                                                                      animate={{
-                                                                           height: "auto",
-                                                                           opacity: 1,
-                                                                      }}
-                                                                      exit={{
-                                                                           height: 0,
-                                                                           opacity: 0,
-                                                                      }}
-                                                                      className="overflow-hidden bg-gray-50/50 rounded-xl mb-2"
-                                                                 >
-                                                                      <div className="flex flex-col py-2 px-4 gap-3">
-                                                                           {item.children.map(
-                                                                                (
-                                                                                     child,
-                                                                                     cIdx,
-                                                                                ) => (
-                                                                                     <a
-                                                                                          key={
-                                                                                               cIdx
-                                                                                          }
-                                                                                          href={
-                                                                                               child.href
-                                                                                          }
-                                                                                          className="text-gray-600 text-sm py-1 hover:text-[#0b5d2e]"
-                                                                                     >
-                                                                                          {
-                                                                                               child.name
-                                                                                          }
-                                                                                     </a>
-                                                                                ),
-                                                                           )}
-                                                                      </div>
-                                                                 </motion.div>
-                                                            )}
-                                                  </AnimatePresence>
-                                             </div>
-                                        ))}
-                                        <Link
-                                             href={"/apply-now"}
-                                             className="w-full py-4 bg-[#0b5d2e] text-white rounded-2xl font-bold mt-4 shadow-lg"
-                                        >
-                                             Apply Now
-                                        </Link>
-                                   </div>
-                              </motion.div>
-                         )}
-                    </AnimatePresence>
-               </div>
-          </nav>
-     );
+                                    </div>
+                                ))}
+                                <Link
+                                    href={"/apply-now"}
+                                    className="px-4 flex items-center gap-1 py-2.5 bg-black/10 text-black/80 justify-center rounded-xl font-semibold"
+                                >
+                                    Apply Now
+                                </Link>
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+            </div>
+        </nav>
+    );
 };
 
 export default Navbar;

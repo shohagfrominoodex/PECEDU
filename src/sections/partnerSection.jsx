@@ -4,97 +4,95 @@ import { motion } from "framer-motion";
 import Partner from "@/components/partner";
 
 const partners = [
-     {
-          name: "Google",
-          logo: "/partners/Eduvisors-Logo.webp",
-          url: "https://eduvisors.com/",
-     },
-     {
-          name: "Microsoft",
-          logo: "/partners/Eduvisors-Logo.webp",
-          url: "https://eduvisors.com/",
-     },
-     {
-          name: "Meta",
-          logo: "/partners/Eduvisors-Logo.webp",
-          url: "https://eduvisors.com/",
-     },
-     {
-          name: "Amazon",
-          logo: "/partners/Eduvisors-Logo.webp",
-          url: "https://eduvisors.com/",
-     },
-     {
-          name: "Netflix",
-          logo: "/partners/Eduvisors-Logo.webp",
-          url: "https://eduvisors.com/",
-     },
-     {
-          name: "Apple",
-          logo: "/partners/Eduvisors-Logo.webp",
-          url: "https://eduvisors.com/",
-     },
+    {
+        name: "Google",
+        logo: "/partners/Eduvisors-Logo.webp",
+        url: "https://eduvisors.com/",
+    },
+    {
+        name: "Microsoft",
+        logo: "/partners/Eduvisors-Logo.webp",
+        url: "https://eduvisors.com/",
+    },
+    {
+        name: "Meta",
+        logo: "/partners/Eduvisors-Logo.webp",
+        url: "https://eduvisors.com/",
+    },
+    {
+        name: "Amazon",
+        logo: "/partners/Eduvisors-Logo.webp",
+        url: "https://eduvisors.com/",
+    },
+    {
+        name: "Netflix",
+        logo: "/partners/Eduvisors-Logo.webp",
+        url: "https://eduvisors.com/",
+    },
+    {
+        name: "Apple",
+        logo: "/partners/Eduvisors-Logo.webp",
+        url: "https://eduvisors.com/",
+    },
 ];
 
 const doubledPartners = [...partners, ...partners];
 
 const PartnerSection = () => {
-     const [isPaused, setIsPaused] = useState(false);
+    const [isPaused, setIsPaused] = useState(false);
 
-     return (
-          <section className="py-20 bg-[#0a0a0a] overflow-hidden">
-               <div className="max-w-7xl mx-auto px-6 mb-10 text-center">
-                    <h2 className="text-white/60 uppercase bg-white/10 w-fit mx-auto px-4 py-2 rounded-full tracking-widest text-sm font-bold">
-                         Trusted Partners
-                    </h2>
-               </div>
+    return (
+        <section className="py-20 bg-[#0a0a0a] overflow-hidden">
+            <div className="max-w-7xl mx-auto px-6 mb-10 text-center">
+                <h2 className="text-white/60 uppercase bg-white/10 w-fit mx-auto px-4 py-2 rounded-full tracking-widest text-sm font-bold">
+                    Trusted Partners
+                </h2>
+            </div>
 
-               <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="w-full text-start md:text-center"
-               >
-                    <motion.h1
-                         initial={{ opacity: 0, y: 20 }}
-                         animate={{ opacity: 1, y: 0 }}
-                         transition={{ duration: 0.5, delay: 0.2 }}
-                         className="text-3xl md:text-5xl font-bold tracking-tight mb-6 md:px-10 lg:px-0 px-4 bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent"
-                    >
-                         Some Top Ranked <br /> Global Universities {"We're"}{" "}
-                         Working with
-                    </motion.h1>
-               </motion.div>
+            <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="w-full text-start md:text-center"
+            >
+                <motion.h1
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="text-3xl md:text-5xl font-bold tracking-tight mb-6 md:px-10 lg:px-0 px-4 bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent"
+                >
+                    Some Top Ranked <br /> Global Universities {"We're"} Working
+                    with
+                </motion.h1>
+            </motion.div>
 
-               <div className="relative flex overflow-hidden py-12 border-y border-white/5">
-                    <div className="absolute inset-y-0 left-0 w-40 bg-linear-to-r from-[#0a0a0a] to-transparent z-10" />
-                    <div className="absolute inset-y-0 right-0 w-40 bg-linear-to-l from-[#0a0a0a] to-transparent z-10" />
+            <div className="relative flex overflow-hidden py-12 border-y border-white/5">
+                <div className="absolute inset-y-0 left-0 w-40 bg-linear-to-r from-[#0a0a0a] to-transparent z-10" />
+                <div className="absolute inset-y-0 right-0 w-40 bg-linear-to-l from-[#0a0a0a] to-transparent z-10" />
 
-                    <motion.div
-                         className="flex gap-12 flex-nowrap w-fit cursor-pointer"
-                         animate={
-                              isPaused
-                                   ? { x: undefined }
-                                   : { x: ["0%", "-50%"] }
-                         }
-                         transition={{
-                              x: {
-                                   repeat: Infinity,
-                                   repeatType: "loop",
-                                   duration: 30,
-                                   ease: "linear",
-                              },
-                         }}
-                         onMouseEnter={() => setIsPaused(true)}
-                         onMouseLeave={() => setIsPaused(false)}
-                    >
-                         {doubledPartners.map((partner, idx) => (
-                              <Partner key={idx} partner={partner} />
-                         ))}
-                    </motion.div>
-               </div>
-          </section>
-     );
+                <motion.div
+                    className="flex gap-12 flex-nowrap w-fit cursor-pointer"
+                    animate={
+                        isPaused ? { x: undefined } : { x: ["0%", "-50%"] }
+                    }
+                    transition={{
+                        x: {
+                            repeat: Infinity,
+                            repeatType: "loop",
+                            duration: 30,
+                            ease: "linear",
+                        },
+                    }}
+                    onMouseEnter={() => setIsPaused(true)}
+                    onMouseLeave={() => setIsPaused(false)}
+                >
+                    {doubledPartners.map((partner, idx) => (
+                        <Partner key={idx} partner={partner} />
+                    ))}
+                </motion.div>
+            </div>
+        </section>
+    );
 };
 
 export default PartnerSection;

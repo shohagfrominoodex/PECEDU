@@ -1,182 +1,121 @@
 "use client";
-// import { Mail, MoveUpRight, Phone } from "lucide-react";
-import { BiLogoFacebookCircle } from "react-icons/bi";
-import { ImLinkedin } from "react-icons/im";
-import { SiYoutube } from "react-icons/si";
-import { BsTwitterX } from "react-icons/bs";
-import Image from "next/image";
+import React from "react";
+import { motion } from "framer-motion";
 import Link from "next/link";
+import { Mail, MapPin, Phone } from "lucide-react";
 
-export default function Footer() {
-     return (
-          <section className="bg-black/90 text-white py-10">
-               <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-12">
-                    <section className="border-r border-white/50 mr-8 col-span-4">
-                         <Image
-                              src="/logo/pecedu.webp"
-                              alt="logo"
-                              width={100}
-                              height={100}
-                         />
-                         <p className="text-gray-200 text-lg font-normal mt-5 w-80">
-                              Eduvisors is a leading educational consultancy
-                              firm that helps students achieve their dreams of
-                              studying abroad.
-                         </p>
-                         <div className="flex items-center gap-5 justify-center mt-5">
-                              <Link
-                                   href={"https://www.facebook.com/pecedubd"}
-                                   target="_blank"
-                              >
-                                   <BiLogoFacebookCircle className="text-3xl" />
-                              </Link>
-                              <Link
-                                   href={
-                                        "https://www.linkedin.com/company/pecedu"
-                                   }
-                                   target="_blank"
-                              >
-                                   <ImLinkedin className="text-[25px]" />
-                              </Link>
-                              <Link
-                                   href={"https://www.twitter.com/pecedu"}
-                                   target="_blank"
-                              >
-                                   <BsTwitterX className="text-[25px]" />
-                              </Link>
-                              <Link
-                                   href={"https://www.youtube.com/pecedu"}
-                                   target="_blank"
-                              >
-                                   <SiYoutube className="text-3xl" />
-                              </Link>
-                         </div>
-                    </section>
-                    <section className="border-r border-white/50 mr-8 col-span-2">
-                         <h2 className="text-2xl font-semibold">Quick Links</h2>
-                         <section className="mt-5 flex flex-col space-y-2">
-                              <Link href={"/"}>Home</Link>
-                              <Link href={"/about"}>About</Link>
-                              <Link href={"/study-abroad"}>Study Abroad</Link>
-                              <Link href={"/resources"}>Resources</Link>
-                              <Link href={"/events"}>Events</Link>
-                              <Link href={"/universities"}>Universities</Link>
-                              <Link href={"/contact"}>Contact</Link>
-                         </section>
-                    </section>
-                    <section className="border-r border-white/50 mr-8 col-span-3">
-                         <h2 className="text-2xl font-semibold">
-                              Popular University
-                         </h2>
-                         <section className="mt-5 flex flex-col space-y-2">
-                              <Link
-                                   href={"/universities/uttara-university"}
-                                   className="flex items-center gap-2 group"
-                              >
-                                   Uttara University
-                                   {/* <MoveUpRight
-                                        size={16}
-                                        strokeWidth={1.25}
-                                        className="group-hover:block hidden duration-300"
-                                   /> */}
-                              </Link>
-                              <Link
-                                   href={"/universities/dhaka-university"}
-                                   className="flex items-center gap-2 group"
-                              >
-                                   Dhaka University
-                                   {/* <MoveUpRight
-                                        size={16}
-                                        strokeWidth={1.25}
-                                        className="group-hover:block hidden duration-300"
-                                   /> */}
-                              </Link>
-                              <Link
-                                   href={"/universities/brac-university"}
-                                   className="flex items-center gap-2 group"
-                              >
-                                   Brac University
-                                   {/* <MoveUpRight
-                                        size={16}
-                                        strokeWidth={1.25}
-                                        className="group-hover:block hidden duration-300"
-                                   /> */}
-                              </Link>
-                              <Link
-                                   href={"/universities/north-south-university"}
-                                   className="flex items-center gap-2 group"
-                              >
-                                   North South University
-                                   {/* <MoveUpRight
-                                        size={16}
-                                        strokeWidth={1.25}
-                                        className="group-hover:block hidden duration-300"
-                                   /> */}
-                              </Link>
-                              <Link
-                                   href={"/universities/east-west-university"}
-                                   className="flex items-center gap-2 group"
-                              >
-                                   East West University
-                                   {/* <MoveUpRight
-                                        size={16}
-                                        strokeWidth={1.25}
-                                        className="group-hover:block hidden duration-300"
-                                   /> */}
-                              </Link>
-                              <Link
-                                   href={"/universities/aiub"}
-                                   className="flex items-center gap-2 group"
-                              >
-                                   AIUB
-                                   {/* <MoveUpRight
-                                        size={16}
-                                        strokeWidth={1.25}
-                                        className="group-hover:block hidden duration-300"
-                                   /> */}
-                              </Link>
-                         </section>
-                    </section>
-                    <section className="col-span-3">
-                         <h2 className="text-2xl font-semibold">Need Help?</h2>
-                         <div className="flex flex-col gap-2 mt-5">
-                              <div className="flex items-center gap-2">
-                                   {/* <Phone size={15} /> */}
-                                   <p>+8801712345678</p>
-                              </div>
-                              <div className="flex items-center gap-2">
-                                   {/* <Mail size={15} /> */}
-                                   <Link href={"mailto:info@pecedu.com.bd"}>
-                                        info@pecedu.com.bd
-                                   </Link>
-                              </div>
-                         </div>
-                         <hr className="border-gray-400 my-5" />
-                         <section>
-                              <h2>Subscribe Our Newsletter?</h2>
-                              <div className="flex items-center gap-2 mt-2">
-                                   <input
-                                        type="email"
-                                        placeholder="Enter your email"
-                                        className="border border-gray-400 bg-white placeholder:text-gray-500 outline-none rounded-md px-3 py-1.5"
-                                   />
-                                   <button className="bg-[#0D5F2B] hover:bg-white/80 flex hover:text-black/80 cursor-pointer hover:shadow-lg duration-300 hover:scale-102 px-3 py-2 rounded-lg text-white text-sm font-semibold">
-                                        Subscribe
-                                   </button>
-                              </div>
-                         </section>
-                    </section>
-               </section>
-               <hr className="border-white/50 max-w-7xl mx-auto my-10" />
-               <section className="max-w-7xl mx-auto">
-                    <p className="text-center text-gray-400">
-                         &copy; {new Date().getFullYear()}{" "}
-                         <Link href="/" className="hover:text-white">
-                              PecEdu
-                         </Link>
-                         . All rights reserved.
-                    </p>
-               </section>
-          </section>
-     );
-}
+const Footer = () => {
+    const currentYear = new Date().getFullYear();
+
+    const footerLinks = [
+        {
+            title: "Quick Links",
+            links: ["About", "Study Abroad", "Resources", "Events", "Contact"],
+        },
+        {
+            title: "Study Abroad",
+            links: [
+                "Study in Singapore",
+                "Study in China",
+                "Study in Japan",
+                "Study in South Korea",
+                "Study in Malaysia",
+            ],
+        },
+        { title: "Resources", links: ["Blog", "Events", "FAQ", "Support"] },
+    ];
+
+    return (
+        <footer className="relative bg-[#0f0f0f] pt-20 pb-10 px-6 overflow-hidden">
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-150 h-75 bg-[#0b5d2e]/20 blur-[120px] rounded-full -z-10" />
+
+            <div className="max-w-7xl mx-auto relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+                    <div className="lg:col-span-2">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="flex items-center gap-2 mb-6"
+                        >
+                            <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center font-bold text-[#0b5d2e] text-xl">
+                                P
+                            </div>
+                            <span className="text-2xl font-bold text-white tracking-tight">
+                                PecEdu
+                            </span>
+                        </motion.div>
+                        <p className="text-gray-400 mb-8 max-w-sm leading-relaxed">
+                            PecEdu is a leading educational consultancy firm
+                            that helps students achieve their dreams of studying
+                            abroad.
+                        </p>
+                    </div>
+
+                    {footerLinks.map((section, idx) => (
+                        <motion.div
+                            key={idx}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: idx * 0.1 }}
+                        >
+                            <h4 className="text-white font-bold mb-6">
+                                {section.title}
+                            </h4>
+                            <ul className="space-y-4">
+                                {section.links.map((link, lIdx) => (
+                                    <Link
+                                        href={"/d"}
+                                        key={lIdx}
+                                        className="text-gray-400 hover:text-white transition-colors flex items-center gap-1 group"
+                                    >
+                                        {link}
+                                    </Link>
+                                ))}
+                            </ul>
+                        </motion.div>
+                    ))}
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-8 border-y border-white/5 mb-10">
+                    <div className="flex items-center gap-4 text-gray-400">
+                        <div className="p-3 bg-white/5 rounded-full">
+                            <MapPin size={20} strokeWidth={1} />
+                        </div>
+                        <p className="text-sm">Dhaka, Bangladesh</p>
+                    </div>
+                    <div className="flex items-center gap-4 text-gray-400">
+                        <div className="p-3 bg-white/5 rounded-full">
+                            <Phone size={20} strokeWidth={1} />
+                        </div>
+                        <a href="tel:+8801234567890" className="text-sm">
+                            +880 1234 567 890
+                        </a>
+                    </div>
+                    <div className="flex items-center gap-4 text-gray-400">
+                        <div className="p-3 bg-white/5 rounded-full">
+                            <Mail size={20} strokeWidth={1} />
+                        </div>
+                        <a href="mailto:info@pecedu.com" className="text-sm">
+                            info@pecedu.com
+                        </a>
+                    </div>
+                </div>
+
+                <div className="flex flex-col md:row justify-between items-center gap-6 text-gray-500 text-sm">
+                    <p>© {currentYear} PecEdu. All rights reserved.</p>
+                    <div className="flex gap-8">
+                        <a href="#" className="hover:text-white">
+                            Privacy Policy
+                        </a>
+                        <a href="#" className="hover:text-white">
+                            Terms of Service
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+};
+
+export default Footer;
