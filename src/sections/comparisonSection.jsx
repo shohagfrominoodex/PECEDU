@@ -23,7 +23,7 @@ const FEATURES = [
 
 export default function ComparisonSection() {
     return (
-        <section className="py-20 pt-0 lg:pt-20 px-4 bg-blue-950">
+        <section className="py-20 pt-20 px-4 bg-blue-950">
             <div className="max-w-5xl mx-auto">
                 <div className="max-w-7xl mx-auto px-6 mb-10 text-center">
                     <h2 className="text-white/60 uppercase bg-white/10 w-fit mx-auto px-4 py-2 rounded-full tracking-widest text-sm font-bold">
@@ -41,14 +41,19 @@ export default function ComparisonSection() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="text-3xl md:text-5xl font-bold tracking-tight mb-6 md:px-10 lg:px-0 px-4 bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent"
+                        className="text-3xl md:text-5xl text-center mb-10 font-bold tracking-tight md:px-10 lg:px-0 px-4 bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent"
                     >
                         See How We Compare With Others
                     </motion.h1>
                 </motion.div>
 
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
-                    <div className="rounded-2xl border border-[#e0ddd6] overflow-hidden">
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.6 }}
+                        className="rounded-2xl border border-[#e0ddd6] overflow-hidden"
+                    >
                         <div className="bg-white px-5 py-4 flex items-center gap-3">
                             <div className="w-9 h-9 rounded-xl bg-[#f0ede8] flex items-center justify-center shrink-0">
                                 <CirclePlus strokeWidth={1} />
@@ -86,9 +91,14 @@ export default function ComparisonSection() {
                                 </p>
                             </div>
                         ))}
-                    </div>
+                    </motion.div>
 
-                    <div className="rounded-2xl border-2 border-blue-900 overflow-hidden">
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.6 }}
+                        className="rounded-2xl border-2 border-blue-900 overflow-hidden"
+                    >
                         <div className="bg-blue-900 px-5 py-4 flex items-center gap-3">
                             <div className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
                                 <Layers strokeWidth={1} stroke="#FFF" />
@@ -128,7 +138,7 @@ export default function ComparisonSection() {
                                 </div>
                             ))}
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
 
                 <div className="flex justify-center mt-10">

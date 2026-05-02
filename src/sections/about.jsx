@@ -5,12 +5,12 @@ import { motion } from "motion/react";
 
 const AboutSection = () => {
     return (
-        <section className="mt-30">
+        <section className="lg:mt-30 mt-10">
             <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="bg-clip-text text-transparent bg-linear-to-r from-blue-900 to-blue-500 text-center text-5xl font-semibold"
+                className="bg-clip-text text-transparent bg-linear-to-r from-blue-900 to-blue-500 text-center text-3xl px-5 md:px-20 md:text-5xl font-semibold"
             >
                 Learn About The Best Study Abroad Deals With PecEdu
             </motion.h1>
@@ -18,12 +18,12 @@ const AboutSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-center text-xl text-gray-700 my-5"
+                className="text-center text-xl text-gray-700 my-5 px-5"
             >
                 We’re just a call away – get free expert guidance from the
                 comfort of your home.
             </motion.p>
-            <section className="mt-20 pb-30 px-4 max-w-full mx-auto relative bg-blue-900 to-white xl:rounded-t-[150px]">
+            <section className="lg:mt-20 mt-10 pb-30 px-4 max-w-full mx-auto relative bg-blue-900 to-white xl:rounded-t-[150px]">
                 <section className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 pt-20">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

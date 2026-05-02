@@ -49,7 +49,7 @@ export default function BlogsSection() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="text-3xl md:text-5xl font-bold tracking-tight mb-6 md:px-10 lg:px-0 px-4 bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent"
+                        className="text-3xl md:text-5xl text-center font-bold tracking-tight mb-6 md:px-10 lg:px-0 px-4 bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent"
                     >
                         Latest Blogs
                     </motion.h1>

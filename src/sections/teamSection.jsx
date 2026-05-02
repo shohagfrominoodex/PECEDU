@@ -80,7 +80,7 @@ const TeamSection = () => {
 
     return (
         <section className="bg-linear-to-b from-blue-950 via-blue-950 to-blue-900 w-full">
-            <section className="w-full mx-auto py-30 overflow-hidden relative">
+            <section className="w-full mx-auto lg:py-30 py-20 overflow-hidden relative">
                 <div className="mb-8">
                     <p className="bg-blue-800 text-blue-100 rounded-full w-fit mx-auto px-5 py-2 text-lg font-semibold">
                         Team Members
@@ -110,8 +110,8 @@ const TeamSection = () => {
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                 >
-                    <div className="absolute left-0 top-0 bottom-0 w-24 lg:w-80 h-full bg-linear-to-r from-blue-950 to-transparent z-10 pointer-events-none"></div>
-                    <div className="absolute right-0 top-0 bottom-0 w-24 lg:w-80 bg-linear-to-l from-blue-950 to-transparent z-10 pointer-events-none"></div>
+                    <div className="absolute left-0 top-0 bottom-0 w-15 lg:w-70 h-full bg-linear-to-r from-blue-950 to-transparent z-10 pointer-events-none"></div>
+                    <div className="absolute right-0 top-0 bottom-0 w-15 lg:w-70 bg-linear-to-l from-blue-950 to-transparent z-10 pointer-events-none"></div>
                     <motion.div
                         ref={containerRef}
                         className="flex w-max cursor-grab active:cursor-grabbing touch-pan-y py-0"

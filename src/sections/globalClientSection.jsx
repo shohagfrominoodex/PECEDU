@@ -55,7 +55,7 @@ const GlobalClients = () => {
             <h1 className="font-semibold text-lg text-center text-blue-100">
                 Global clients around the world
             </h1>
-            <section className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-7xl mx-auto">
+            <section className="grid md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
                 {globalScore.map((score, idx) => (
                     <section key={score.id} className="text-center mt-8">
                         <h2
