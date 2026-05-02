@@ -51,8 +51,8 @@ const GlobalClients = () => {
         });
     }, []);
     return (
-        <section className="py-20 bg-linear-to-b from-blue-900 to-blue-950">
-            <h1 className="font-semibold text-lg text-center text-blue-100">
+        <section className="py-20 bg-linear-to-b from-green-900 to-green-950">
+            <h1 className="font-semibold text-lg text-center text-green-100">
                 Global clients around the world
             </h1>
             <section className="grid md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
@@ -60,11 +60,11 @@ const GlobalClients = () => {
                     <section key={score.id} className="text-center mt-8">
                         <h2
                             ref={(el) => (refs.current[idx] = el)}
-                            className="text-6xl font-bold text-blue-100"
+                            className="text-6xl font-bold text-green-100"
                         >
                             0
                         </h2>
-                        <p className="text-lg font-medium mt-2 text-blue-200">
+                        <p className="text-lg font-medium mt-2 text-green-200">
                             {score.text}
                         </p>
                     </section>

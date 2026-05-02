@@ -58,19 +58,19 @@ export default function ServicesSection() {
     return (
         <section
             id="services"
-            className="bg-linear-to-b bg-blue-900 py-20 px-4"
+            className="bg-linear-to-b bg-green-900 py-20 px-4"
         >
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col items-center md:justify-between gap-6 mb-12">
                     <div>
-                        <p className="bg-blue-950 text-blue-100 rounded-full w-fit mx-auto px-5 py-2 text-lg font-semibold">
+                        <p className="bg-green-950 text-green-100 rounded-full w-fit mx-auto px-5 py-2 text-lg font-semibold">
                             Services That We Prodive
                         </p>
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
-                            className="text-4xl text-blue-100 text-center mt-3 font-semibold"
+                            className="text-4xl text-green-100 text-center mt-3 font-semibold"
                         >
                             Services Designed Around You
                         </motion.h1>
@@ -79,7 +79,7 @@ export default function ServicesSection() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="text-blue-200 text-lg leading-relaxed text-center"
+                        className="text-green-200 text-lg leading-relaxed text-center"
                     >
                         From your first enquiry to the day you land — {"we're"}{" "}
                         with you every step of the way.
@@ -98,15 +98,15 @@ export default function ServicesSection() {
 
 function ServiceCard({ icon, title, desc }) {
     return (
-        <div className="bg-linear-145 bg-blue-950 border border-white/30 hover:scale-103 rounded-2xl p-7 flex flex-col gap-6 hover:shadow-md duration-300">
-            <div className="bg-blue-100 p-2 rounded-2xl w-fit shadow-lg">
+        <div className="bg-linear-145 bg-green-950 border border-white/30 hover:scale-103 rounded-2xl p-7 flex flex-col gap-6 hover:shadow-md duration-300">
+            <div className="bg-green-100 p-2 rounded-2xl w-fit shadow-lg">
                 {icon}
             </div>
             <div>
-                <h3 className="text-blue-100 text-2xl font-semibold mb-2.5 leading-snug">
+                <h3 className="text-green-100 text-2xl font-semibold mb-2.5 leading-snug">
                     {title}
                 </h3>
-                <p className="text-blue-100 text-sm leading-relaxed">{desc}</p>
+                <p className="text-green-100 text-sm leading-relaxed">{desc}</p>
             </div>
         </div>
     );

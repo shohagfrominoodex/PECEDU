@@ -94,7 +94,7 @@ const HeroAnimation = () => {
                             Experience Excellence{" "}
                             <br className="hidden md:block" /> in Education{" "}
                             <br /> Study in{" "}
-                            <span className="text-blue-500 bg-white px-2 rounded-md">
+                            <span className="text-green-500 bg-white px-2 rounded-md">
                                 Denmark
                             </span>
                         </motion.h1>

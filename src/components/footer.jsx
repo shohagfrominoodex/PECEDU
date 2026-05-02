@@ -26,7 +26,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="relative bg-[#060041] pt-20 pb-10 px-6 overflow-hidden">
+        <footer className="relative bg-[#002007] pt-20 pb-10 px-6 overflow-hidden">
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-150 h-75 bg-[#0b5d2e]/20 blur-[120px] rounded-full -z-10" />
 
             <div className="max-w-7xl mx-auto relative z-10">

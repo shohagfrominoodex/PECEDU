@@ -31,7 +31,7 @@ export default function BlogsSection() {
         },
     ];
     return (
-        <section className="w-full bg-blue-950/95 py-20">
+        <section className="w-full bg-green-950/95 py-20">
             <section className="max-w-7xl mx-auto">
                 <div className="max-w-7xl mx-auto px-6 mb-10 text-center">
                     <h2 className="text-white/60 uppercase bg-white/10 w-fit mx-auto px-4 py-2 rounded-full tracking-widest text-sm font-bold">

@@ -6,7 +6,7 @@ export default function Blog({ blog }) {
         <Link
             href={`/blogs/${blog.id}`}
             key={blog.id}
-            className="border border-black/10 bg-blue-950 p-1 shadow-lg rounded-3xl overflow-hidden"
+            className="border border-black/10 bg-green-950 p-1 shadow-lg rounded-3xl overflow-hidden"
         >
             <Image
                 src={blog.image}
@@ -16,14 +16,14 @@ export default function Blog({ blog }) {
                 height={200}
             />
             <div className="p-3">
-                <p className="text-blue-100 mt-2">{blog.date}</p>
+                <p className="text-green-100 mt-2">{blog.date}</p>
                 <h3 className="text-xl text-white font-bold mt-2">
                     {blog.title}
                 </h3>
                 <p className="text-white/70 mt-2">{blog.description}</p>
             </div>
             <div className="p-3">
-                <button className="bg-blue-900 cursor-pointer hover:bg-white/80 inline-flex hover:text-black/80 hover:shadow-lg duration-300 hover:scale-102 px-4 py-2.5 rounded-xl text-white text-sm font-semibold">
+                <button className="bg-green-900 cursor-pointer hover:bg-white/80 inline-flex hover:text-black/80 hover:shadow-lg duration-300 hover:scale-102 px-4 py-2.5 rounded-xl text-white text-sm font-semibold">
                     Read More
                 </button>
             </div>

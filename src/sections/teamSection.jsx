@@ -79,17 +79,17 @@ const TeamSection = () => {
     };
 
     return (
-        <section className="bg-linear-to-b from-blue-950 via-blue-950 to-blue-900 w-full">
+        <section className="bg-linear-to-b from-green-950 via-green-950 to-green-900 w-full">
             <section className="w-full mx-auto lg:py-30 py-20 overflow-hidden relative">
                 <div className="mb-8">
-                    <p className="bg-blue-800 text-blue-100 rounded-full w-fit mx-auto px-5 py-2 text-lg font-semibold">
+                    <p className="bg-green-800 text-green-100 rounded-full w-fit mx-auto px-5 py-2 text-lg font-semibold">
                         Team Members
                     </p>
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="text-4xl text-blue-100 text-center my-4 font-semibold"
+                        className="text-4xl text-green-100 text-center my-4 font-semibold"
                     >
                         Experienced. Excellence. Extraordinary
                     </motion.h1>
@@ -97,7 +97,7 @@ const TeamSection = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="md:text-lg text-base px-6 md:w-150 text-center text-blue-200 mx-auto"
+                        className="md:text-lg text-base px-6 md:w-150 text-center text-green-200 mx-auto"
                     >
                         We give our employees chance to grow and reach their
                         potential. Our team has expertise in guiding students,
@@ -110,8 +110,8 @@ const TeamSection = () => {
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                 >
-                    <div className="absolute left-0 top-0 bottom-0 w-15 lg:w-70 h-full bg-linear-to-r from-blue-950 to-transparent z-10 pointer-events-none"></div>
-                    <div className="absolute right-0 top-0 bottom-0 w-15 lg:w-70 bg-linear-to-l from-blue-950 to-transparent z-10 pointer-events-none"></div>
+                    <div className="absolute left-0 top-0 bottom-0 w-15 lg:w-70 h-full bg-linear-to-r from-green-950 to-transparent z-10 pointer-events-none"></div>
+                    <div className="absolute right-0 top-0 bottom-0 w-15 lg:w-70 bg-linear-to-l from-green-950 to-transparent z-10 pointer-events-none"></div>
                     <motion.div
                         ref={containerRef}
                         className="flex w-max cursor-grab active:cursor-grabbing touch-pan-y py-0"
@@ -143,18 +143,18 @@ const TeamSection = () => {
                                             />
                                         </section>
                                         <section
-                                            className="absolute inset-0 z-20 rounded-3xl bg-blue-200/80 p-5 opacity-0 pointer-events-none transform
+                                            className="absolute inset-0 z-20 rounded-3xl bg-green-200/80 p-5 opacity-0 pointer-events-none transform
                                                 translate-y-20 group-hover:opacity-100
                                                 group-hover:pointer-events-auto backdrop-blur-[10px]
                                                 group-hover:translate-y-0 transition-all ease-in-out
                                                 duration-500 flex flex-col justify-center"
                                         >
                                             <div className="self-start">
-                                                <span className="text-sm font-light px-3 py-1.5 bg-blue-100 text-blue-500 rounded-full">
+                                                <span className="text-sm font-light px-3 py-1.5 bg-green-100 text-green-500 rounded-full">
                                                     - Why Choose Us
                                                 </span>
                                             </div>
-                                            <h1 className="mt-5 font-medium text-3xl text-blue-500">
+                                            <h1 className="mt-5 font-medium text-3xl text-green-500">
                                                 {benefit.title ||
                                                     `Eduvisors helps you find your perfect study
                                                     abroad destination.`}
@@ -165,7 +165,7 @@ const TeamSection = () => {
                                                 personal goals.
                                             </p>
                                             <div className="absolute bottom-5 left-0 w-full px-6 flex justify-center">
-                                                <button className="w-full border border-blue-800/50 bg-blue-800 text-blue-100 shadow-lg cursor-pointer rounded-2xl px-4 py-3 font-medium transition-colors hover:bg-blue-800/80">
+                                                <button className="w-full border border-green-800/50 bg-green-800 text-green-100 shadow-lg cursor-pointer rounded-2xl px-4 py-3 font-medium transition-colors hover:bg-green-800/80">
                                                     Start your journey now!
                                                 </button>
                                             </div>

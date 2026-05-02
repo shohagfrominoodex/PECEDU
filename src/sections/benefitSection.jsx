@@ -46,7 +46,7 @@ const cardData = [
 
 const BenefitsSection = () => {
     return (
-        <section className="lg:py-24 pb-20 px-4 bg-blue-900 overflow-hidden">
+        <section className="lg:py-24 pb-20 px-4 bg-green-900 overflow-hidden">
             <div className="container mx-auto">
                 <div className="text-center">
                     <motion.h1

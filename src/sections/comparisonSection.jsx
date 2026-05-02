@@ -23,7 +23,7 @@ const FEATURES = [
 
 export default function ComparisonSection() {
     return (
-        <section className="py-20 pt-20 px-4 bg-blue-950">
+        <section className="py-20 pt-20 px-4 bg-green-950">
             <div className="max-w-5xl mx-auto">
                 <div className="max-w-7xl mx-auto px-6 mb-10 text-center">
                     <h2 className="text-white/60 uppercase bg-white/10 w-fit mx-auto px-4 py-2 rounded-full tracking-widest text-sm font-bold">
@@ -70,11 +70,11 @@ export default function ComparisonSection() {
                         {FEATURES.map((feature, index) => (
                             <div
                                 key={index}
-                                className="bg-white hover:bg-black/5 px-5 flex items-center border-t border-[#e0ddd6] gap-4"
+                                className="bg-white hover:bg-black/5 hover:text-white px-5 flex items-center border-t border-[#e0ddd6] gap-4"
                             >
                                 <div className="text-[10px] text-[#bbb] font-medium tracking-wide uppercase">
                                     {feature.others ? (
-                                        <div className="bg-blue-950 w-fit rounded-full p-1 my-3 ">
+                                        <div className="bg-green-950 w-fit rounded-full p-1 my-3 ">
                                             <CheckLine
                                                 stroke="white"
                                                 size={14}
@@ -86,7 +86,7 @@ export default function ComparisonSection() {
                                         </div>
                                     )}
                                 </div>
-                                <p className="text-[13px] font-semibold text-[#444]">
+                                <p className="text-[13px] font-semibold">
                                     {feature.label}
                                 </p>
                             </div>
@@ -97,9 +97,9 @@ export default function ComparisonSection() {
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.6 }}
-                        className="rounded-2xl border-2 border-blue-900 overflow-hidden"
+                        className="rounded-2xl border-2 border-green-900 overflow-hidden"
                     >
-                        <div className="bg-blue-900 px-5 py-4 flex items-center gap-3">
+                        <div className="bg-green-900 px-5 py-4 flex items-center gap-3">
                             <div className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
                                 <Layers strokeWidth={1} stroke="#FFF" />
                             </div>
@@ -107,12 +107,12 @@ export default function ComparisonSection() {
                                 <p className="text-[13px] font-semibold text-white">
                                     Pec Edu
                                 </p>
-                                <p className="text-[10px] text-blue-500 font-bold tracking-wide uppercase">
+                                <p className="text-[10px] text-green-500 font-bold tracking-wide uppercase">
                                     ✦ Recommended
                                 </p>
                             </div>
                         </div>
-                        <div className="bg-linear-150 from-blue-900 to-blue-950">
+                        <div className="bg-linear-150 from-green-900 to-green-950">
                             {FEATURES.map((feature, index) => (
                                 <div
                                     key={index}
@@ -120,7 +120,7 @@ export default function ComparisonSection() {
                                 >
                                     <div className="text-[10px] text-[#bbb] font-medium tracking-wide uppercase">
                                         {feature.edu ? (
-                                            <div className="bg-blue-950 w-fit rounded-full p-1 my-3">
+                                            <div className="bg-green-950 w-fit rounded-full p-1 my-3">
                                                 <CheckLine
                                                     stroke="white"
                                                     size={14}

@@ -18,7 +18,7 @@ const features = [
     {
         title: "Global Recognition",
         desc: "Eduvisors is a certified agency offering advice, service, info, and resources to help student clients make informed decisions.",
-        icon: <Award className="text-blue-400" size={28} />,
+        icon: <Award className="text-green-400" size={28} />,
     },
     {
         title: "A Successful Team",
@@ -56,7 +56,7 @@ const WhyChooseUs = () => {
     };
 
     return (
-        <section className="relative py-24 bg-blue-950 overflow-hidden">
+        <section className="relative py-24 bg-green-950 overflow-hidden">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-green-600/10 rounded-full blur-[150px] -z-10" />
 
             <div className="container mx-auto px-4">

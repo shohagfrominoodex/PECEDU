@@ -36,7 +36,7 @@ const PartnerSection = () => {
     const [isPaused, setIsPaused] = useState(false);
 
     return (
-        <section className="py-20 bg-blue-950/95 overflow-hidden">
+        <section className="py-20 bg-green-950/95 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 mb-10 text-center">
                 <h2 className="text-white/60 uppercase bg-white/10 w-fit mx-auto px-4 py-2 rounded-full tracking-widest text-sm font-bold">
                     Trusted Partners
@@ -61,8 +61,8 @@ const PartnerSection = () => {
             </motion.div>
 
             <div className="relative flex overflow-hidden py-12 border-y border-white/5">
-                <div className="absolute inset-y-0 left-0 w-40 bg-linear-to-r from-blue-950/20 to-transparent z-10" />
-                <div className="absolute inset-y-0 right-0 w-40 bg-linear-to-l from-blue-950/20 to-transparent z-10" />
+                <div className="absolute inset-y-0 left-0 w-40 bg-linear-to-r from-green-950/20 to-transparent z-10" />
+                <div className="absolute inset-y-0 right-0 w-40 bg-linear-to-l from-green-950/20 to-transparent z-10" />
 
                 <motion.div
                     className="flex gap-12 flex-nowrap w-fit cursor-pointer"
