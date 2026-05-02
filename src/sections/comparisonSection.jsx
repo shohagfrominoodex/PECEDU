@@ -1,6 +1,7 @@
-import { ArrowRight, CheckLine, CirclePlus, Layers, X } from "lucide-react";
-import Link from "next/link";
-
+"use client";
+import Button from "@/components/button";
+import { CheckLine, CirclePlus, Layers, X } from "lucide-react";
+import { motion } from "motion/react";
 const FEATURES = [
     {
         label: "Authorised by International Universities",
@@ -20,18 +21,31 @@ const FEATURES = [
     { label: "Free Eligibility Assessment", others: true, edu: true },
 ];
 
-export default function WhyChooseSection() {
+export default function ComparisonSection() {
     return (
-        <section className="py-20 pt-0 px-4">
+        <section className="py-20 pt-0 lg:pt-20 px-4 bg-blue-950">
             <div className="max-w-5xl mx-auto">
-                <div className="text-center mb-10">
-                    <p className="bg-[#CEFFE0] text-[#0D5F2B] rounded-full w-fit mx-auto px-5 py-2 text-lg font-semibold">
+                <div className="max-w-7xl mx-auto px-6 mb-10 text-center">
+                    <h2 className="text-white/60 uppercase bg-white/10 w-fit mx-auto px-4 py-2 rounded-full tracking-widest text-sm font-bold">
                         Comparison
-                    </p>
-                    <h1 className="text-4xl text-center my-4 font-semibold">
-                        See How We Compare
-                    </h1>
+                    </h2>
                 </div>
+
+                <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="w-full text-start md:text-center"
+                >
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="text-3xl md:text-5xl font-bold tracking-tight mb-6 md:px-10 lg:px-0 px-4 bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent"
+                    >
+                        See How We Compare With Others
+                    </motion.h1>
+                </motion.div>
 
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                     <div className="rounded-2xl border border-[#e0ddd6] overflow-hidden">
@@ -55,7 +69,7 @@ export default function WhyChooseSection() {
                             >
                                 <div className="text-[10px] text-[#bbb] font-medium tracking-wide uppercase">
                                     {feature.others ? (
-                                        <div className="bg-[#0D5F2B] w-fit rounded-full p-1 my-3 ">
+                                        <div className="bg-blue-950 w-fit rounded-full p-1 my-3 ">
                                             <CheckLine
                                                 stroke="white"
                                                 size={14}
@@ -74,8 +88,8 @@ export default function WhyChooseSection() {
                         ))}
                     </div>
 
-                    <div className="rounded-2xl border-2 border-[#1a3a2a] overflow-hidden">
-                        <div className="bg-[#1a3a2a] px-5 py-4 flex items-center gap-3">
+                    <div className="rounded-2xl border-2 border-blue-900 overflow-hidden">
+                        <div className="bg-blue-900 px-5 py-4 flex items-center gap-3">
                             <div className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
                                 <Layers strokeWidth={1} stroke="#FFF" />
                             </div>
@@ -83,12 +97,12 @@ export default function WhyChooseSection() {
                                 <p className="text-[13px] font-semibold text-white">
                                     Pec Edu
                                 </p>
-                                <p className="text-[10px] text-[#7ec99e] font-bold tracking-wide uppercase">
+                                <p className="text-[10px] text-blue-500 font-bold tracking-wide uppercase">
                                     ✦ Recommended
                                 </p>
                             </div>
                         </div>
-                        <div className="bg-linear-150 from-[#1A3A2A] to-[#0D5F2B]">
+                        <div className="bg-linear-150 from-blue-900 to-blue-950">
                             {FEATURES.map((feature, index) => (
                                 <div
                                     key={index}
@@ -96,7 +110,7 @@ export default function WhyChooseSection() {
                                 >
                                     <div className="text-[10px] text-[#bbb] font-medium tracking-wide uppercase">
                                         {feature.edu ? (
-                                            <div className="bg-[#0D5F2B] w-fit rounded-full p-1 my-3">
+                                            <div className="bg-blue-950 w-fit rounded-full p-1 my-3">
                                                 <CheckLine
                                                     stroke="white"
                                                     size={14}
@@ -117,14 +131,8 @@ export default function WhyChooseSection() {
                     </div>
                 </div>
 
-                <div className="text-center mt-10">
-                    <Link
-                        href="/contact"
-                        className="inline-flex items-center gap-2 bg-[#1a3a2a] text-white text-sm font-semibold px-7 py-3.5 rounded-full hover:bg-[#2a5a3a] transition-colors duration-200"
-                    >
-                        Book Free Consultation
-                        <ArrowRight size={18} />
-                    </Link>
+                <div className="flex justify-center mt-10">
+                    <Button>Book Free Consultation</Button>
                 </div>
             </div>
         </section>

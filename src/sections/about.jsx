@@ -1,30 +1,43 @@
-import AboutNavigation from "@/components/aboutNavigation";
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 const AboutSection = () => {
     return (
-        <section className="my-30">
-            <h1 className="bg-clip-text text-transparent bg-linear-to-r from-[#0E602B] to-[#61CD70] text-center text-5xl font-semibold">
+        <section className="mt-30">
+            <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="bg-clip-text text-transparent bg-linear-to-r from-blue-900 to-blue-500 text-center text-5xl font-semibold"
+            >
                 Learn About The Best Study Abroad Deals With PecEdu
-            </h1>
-            <p className="text-center text-xl text-gray-700 my-5">
+            </motion.h1>
+            <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-center text-xl text-gray-700 my-5"
+            >
                 We’re just a call away – get free expert guidance from the
                 comfort of your home.
-            </p>
-            <section className="mt-20 px-4 max-w-full mx-auto relative bg-linear-to-b from-[#0d9c7de3] to-white xl:rounded-t-[150px]">
+            </motion.p>
+            <section className="mt-20 pb-30 px-4 max-w-full mx-auto relative bg-blue-900 to-white xl:rounded-t-[150px]">
                 <section className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 pt-20">
-                    <section className="absolute -top-10 left-0 w-full">
-                        <AboutNavigation />
-                    </section>
-                    <section className="lg:w-6/12 w-full">
-                        <span className="py-2 px-4 bg-white rounded-full text-lg text-[#0E602B] font-semibold">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.6 }}
+                        className="lg:w-6/12 w-full"
+                    >
+                        <span className="py-2 px-4 bg-white rounded-full text-lg text-blue-500 font-semibold">
                             FEATURE
                         </span>
-                        <h1 className="mt-8 text-5xl font-semibold">
+                        <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 mt-6 text-blue-100">
                             Your Global Journey Starts Here
                         </h1>
-                        <p className="mt-8 text-lg text-[#083216] md:w-120">
+                        <p className="mt-5 text-lg text-blue-100 md:w-120">
                             At Eduvisors, we turn your study abroad dreams into
                             reality. With 17+ years of expertise, personalized
                             guidance, and trusted global university
@@ -35,19 +48,57 @@ const AboutSection = () => {
                         </p>
                         <Link
                             href={"/about"}
-                            className="underline mt-8 inline-flex font-medium"
+                            className="underline mt-8 inline-flex text-blue-100 font-medium"
                         >
                             Read about us
                         </Link>
-                    </section>
+                        <div className="mt-10 flex flex-wrap justify-center md:justify-start gap-2">
+                            <Link
+                                href={"/blogs"}
+                                className="px-5 py-2 bg-blue-950 text-white border border-blue-700/70 backdrop-blur-lg font-semibold rounded-xl hover:border-blue-700/40 duration-300 hover:bg-blue-700 transition-all"
+                            >
+                                Hot Courses
+                            </Link>
+                            <Link
+                                className="px-5 py-2 bg-blue-950 text-white border border-blue-700/70 backdrop-blur-lg font-semibold rounded-xl hover:border-blue-700/40 duration-300 hover:bg-blue-700 transition-all"
+                                href={"/universities"}
+                            >
+                                Popular University
+                            </Link>
+                            <Link
+                                className="px-5 py-2 bg-blue-950 text-white border border-blue-700/70 backdrop-blur-lg font-semibold rounded-xl hover:border-blue-700/40 duration-300 hover:bg-blue-700 transition-all"
+                                href={"/counselling"}
+                            >
+                                Free Counselling
+                            </Link>
+                            <Link
+                                className="px-5 py-2 bg-blue-950 text-white border border-blue-700/70 backdrop-blur-lg font-semibold rounded-xl hover:border-blue-700/40 duration-300 hover:bg-blue-700 transition-all"
+                                href={"/test"}
+                            >
+                                Popular Tools
+                            </Link>
+                            <Link
+                                className="px-5 py-2 bg-blue-950 text-white border border-blue-700/70 backdrop-blur-lg font-semibold rounded-xl hover:border-blue-700/40 duration-300 hover:bg-blue-700 transition-all"
+                                href={"/mock-test"}
+                            >
+                                Free Mock Test
+                            </Link>
+                        </div>
+                    </motion.div>
                     <section className="lg:w-6/12 w-full">
-                        <Image
-                            src={"/images/about-image.gif"}
-                            alt={"about Image"}
-                            width={1000}
-                            className="rounded-3xl"
-                            height={500}
-                        />
+                        <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5, delay: 0.6 }}
+                        >
+                            <Image
+                                src={"/images/about-image.gif"}
+                                alt={"about Image"}
+                                width={1000}
+                                className="rounded-3xl"
+                                height={500}
+                            />
+                        </motion.div>
                     </section>
                 </section>
             </section>

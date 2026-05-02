@@ -79,88 +79,104 @@ const TeamSection = () => {
     };
 
     return (
-        <section className="max-w-7xl mx-auto my-10 overflow-hidden relative">
-            <div className="mb-5">
-                <p className="bg-[#CEFFE0] text-[#0D5F2B] rounded-full w-fit mx-auto px-5 py-2 text-lg font-semibold">
-                    Team Members
-                </p>
-                <h1 className="text-4xl text-center my-4 font-semibold">
-                    Experienced. Excellence. Extraordinary
-                </h1>
-                <p className="md:text-lg text-base px-6 md:w-150 text-center text-gray-500 mx-auto">
-                    We give our employees chance to grow and reach their
-                    potential. Our team has expertise in guiding students, and
-                    we make sure each employee is informed on industry trends.
-                </p>
-            </div>
-            <div
-                className="w-full relative"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-            >
-                <div className="absolute left-0 top-0 bottom-0 w-24 bg-linear-to-r from-white to-transparent z-10 pointer-events-none"></div>
-                <div className="absolute right-0 top-0 bottom-0 w-24 bg-linear-to-l from-white to-transparent z-10 pointer-events-none"></div>
-                <motion.div
-                    ref={containerRef}
-                    className="flex w-max cursor-grab active:cursor-grabbing touch-pan-y py-5"
-                    style={{ x }}
-                    onPanStart={() => setIsDragging(true)}
-                    onPan={(e, info) => {
-                        baseX.set(baseX.get() + info.delta.x);
-                    }}
-                    onPanEnd={handlePanEnd}
+        <section className="bg-linear-to-b from-blue-950 via-blue-950 to-blue-900 w-full">
+            <section className="w-full mx-auto py-30 overflow-hidden relative">
+                <div className="mb-8">
+                    <p className="bg-blue-800 text-blue-100 rounded-full w-fit mx-auto px-5 py-2 text-lg font-semibold">
+                        Team Members
+                    </p>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="text-4xl text-blue-100 text-center my-4 font-semibold"
+                    >
+                        Experienced. Excellence. Extraordinary
+                    </motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="md:text-lg text-base px-6 md:w-150 text-center text-blue-200 mx-auto"
+                    >
+                        We give our employees chance to grow and reach their
+                        potential. Our team has expertise in guiding students,
+                        and we make sure each employee is informed on industry
+                        trends.
+                    </motion.p>
+                </div>
+                <div
+                    className="w-full relative"
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
                 >
-                    {[1, 2, 3, 4, 5].map((set) => (
-                        <section key={set} className="flex gap-6 pr-6 shrink-0">
-                            {benefits.map((benefit) => (
-                                <section
-                                    key={`${set}-${benefit.id}`}
-                                    className="relative w-[300px] sm:w-[300px] h-[400px] group shrink-0"
-                                >
-                                    <section className="w-full h-full relative z-10 transition-transform duration-500 group-hover:scale-105">
-                                        <Image
-                                            src={benefit.src}
-                                            height={400}
-                                            width={350}
-                                            className="rounded-3xl h-full shadow-2xl object-cover"
-                                            alt={benefit.title}
-                                            draggable={false}
-                                        />
-                                    </section>
+                    <div className="absolute left-0 top-0 bottom-0 w-24 lg:w-80 h-full bg-linear-to-r from-blue-950 to-transparent z-10 pointer-events-none"></div>
+                    <div className="absolute right-0 top-0 bottom-0 w-24 lg:w-80 bg-linear-to-l from-blue-950 to-transparent z-10 pointer-events-none"></div>
+                    <motion.div
+                        ref={containerRef}
+                        className="flex w-max cursor-grab active:cursor-grabbing touch-pan-y py-0"
+                        style={{ x }}
+                        onPanStart={() => setIsDragging(true)}
+                        onPan={(e, info) => {
+                            baseX.set(baseX.get() + info.delta.x);
+                        }}
+                        onPanEnd={handlePanEnd}
+                    >
+                        {[1, 2, 3, 4, 5].map((set) => (
+                            <section
+                                key={set}
+                                className="flex gap-6 pr-6 shrink-0"
+                            >
+                                {benefits.map((benefit) => (
                                     <section
-                                        className="absolute inset-0 z-20 rounded-3xl bg-gray-200/80 p-5 opacity-0 pointer-events-none transform
+                                        key={`${set}-${benefit.id}`}
+                                        className="relative w-75 sm:w-75 h-100 group shrink-0"
+                                    >
+                                        <section className="w-full h-full relative z-10 transition-transform duration-500 group-hover:scale-105">
+                                            <Image
+                                                src={benefit.src}
+                                                height={400}
+                                                width={1000}
+                                                className="rounded-3xl h-full shadow-lg object-cover"
+                                                alt={benefit.title}
+                                                draggable={false}
+                                            />
+                                        </section>
+                                        <section
+                                            className="absolute inset-0 z-20 rounded-3xl bg-blue-200/80 p-5 opacity-0 pointer-events-none transform
                                                 translate-y-20 group-hover:opacity-100
                                                 group-hover:pointer-events-auto backdrop-blur-[10px]
                                                 group-hover:translate-y-0 transition-all ease-in-out
                                                 duration-500 flex flex-col justify-center"
-                                    >
-                                        <div className="self-start">
-                                            <span className="text-sm font-light px-3 py-1.5 bg-gray-400 text-white rounded-full">
-                                                - Why Choose Us
-                                            </span>
-                                        </div>
-                                        <h1 className="mt-5 font-medium text-3xl text-green-800">
-                                            {benefit.title ||
-                                                `Eduvisors helps you find your perfect study
+                                        >
+                                            <div className="self-start">
+                                                <span className="text-sm font-light px-3 py-1.5 bg-blue-100 text-blue-500 rounded-full">
+                                                    - Why Choose Us
+                                                </span>
+                                            </div>
+                                            <h1 className="mt-5 font-medium text-3xl text-blue-500">
+                                                {benefit.title ||
+                                                    `Eduvisors helps you find your perfect study
                                                     abroad destination.`}
-                                        </h1>
-                                        <p className="mt-3 font-normal text-sm mb-16">
-                                            We will help you choose the best
-                                            country for your academic and
-                                            personal goals.
-                                        </p>
-                                        <div className="absolute bottom-5 left-0 w-full px-6 flex justify-center">
-                                            <button className="w-full border border-green-800/50 bg-green-800/20 text-green-800 shadow-lg cursor-pointer rounded-full px-4 py-3 font-medium transition-colors hover:bg-green-800/30">
-                                                Start your journey now!
-                                            </button>
-                                        </div>
+                                            </h1>
+                                            <p className="mt-3 font-normal text-sm mb-16">
+                                                We will help you choose the best
+                                                country for your academic and
+                                                personal goals.
+                                            </p>
+                                            <div className="absolute bottom-5 left-0 w-full px-6 flex justify-center">
+                                                <button className="w-full border border-blue-800/50 bg-blue-800 text-blue-100 shadow-lg cursor-pointer rounded-2xl px-4 py-3 font-medium transition-colors hover:bg-blue-800/80">
+                                                    Start your journey now!
+                                                </button>
+                                            </div>
+                                        </section>
                                     </section>
-                                </section>
-                            ))}
-                        </section>
-                    ))}
-                </motion.div>
-            </div>
+                                ))}
+                            </section>
+                        ))}
+                    </motion.div>
+                </div>
+            </section>
         </section>
     );
 };

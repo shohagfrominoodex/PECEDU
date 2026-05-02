@@ -1,6 +1,9 @@
+"use client";
+import { motion } from "motion/react";
 import Blog from "@/components/blog";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Button from "@/components/button";
 
 export default function BlogsSection() {
     const blogs = [
@@ -28,29 +31,38 @@ export default function BlogsSection() {
         },
     ];
     return (
-        <section className="max-w-7xl mx-auto my-10">
-            <section>
-                <p className="bg-[#CEFFE0] text-[#0D5F2B] rounded-full w-fit mx-auto px-5 py-2 text-lg font-semibold">
-                    Blogs
-                </p>
-                <h2 className="text-4xl font-bold text-center mt-3">
-                    Latest Blogs
-                </h2>
-            </section>
-            <section className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 px-4 gap-5 mt-10">
-                {blogs.map((blog) => (
-                    <Blog key={blog.id} blog={blog} />
-                ))}
-            </section>
-            <div className="flex justify-center">
-                <Link
-                    href={"/blogs"}
-                    className="bg-[#0D5F2B] flex items-center gap-2 hover:bg-white/80 mt-5 hover:text-black/80 hover:shadow-lg duration-300 hover:scale-102 px-4 py-2.5 rounded-full text-white text-sm font-semibold"
+        <section className="w-full bg-blue-950/95 py-20">
+            <section className="max-w-7xl mx-auto">
+                <div className="max-w-7xl mx-auto px-6 mb-10 text-center">
+                    <h2 className="text-white/60 uppercase bg-white/10 w-fit mx-auto px-4 py-2 rounded-full tracking-widest text-sm font-bold">
+                        Blogs
+                    </h2>
+                </div>
+
+                <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="w-full text-start md:text-center"
                 >
-                    View All Blogs
-                    <ArrowRight size={20} />
-                </Link>
-            </div>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="text-3xl md:text-5xl font-bold tracking-tight mb-6 md:px-10 lg:px-0 px-4 bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent"
+                    >
+                        Latest Blogs
+                    </motion.h1>
+                </motion.div>
+                <section className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 px-4 gap-5 mt-10">
+                    {blogs.map((blog) => (
+                        <Blog key={blog.id} blog={blog} />
+                    ))}
+                </section>
+                <div className="mt-5 flex justify-center">
+                    <Button>View All Blogs</Button>
+                </div>
+            </section>
         </section>
     );
 }

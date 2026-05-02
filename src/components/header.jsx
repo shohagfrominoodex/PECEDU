@@ -1,281 +1,257 @@
 "use client";
-import { Menu, X } from "lucide-react";
-import Image from "next/image";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { ChevronDown, Menu, MoveUpRight, X } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
-import {
-  MdKeyboardArrowDown,
-  MdKeyboardArrowRight,
-  MdKeyboardArrowUp,
-} from "react-icons/md";
-import Button from "./button";
+import Image from "next/image";
 
-export default function Header() {
-  const [open, setOpen] = useState(false);
-  return (
-    <section className="flex items-center justify-between backdrop-blur-lg shadow-lg xl:px-10 lg:px-5 px-2 py-1 mx-auto">
-      <section>
-        <Link href={"/"}>
-          <Image
-            src={"/logo/pecedu.webp"}
-            alt="eduvisors logo"
-            className=""
-            width={100}
-            height={100}
-          />
-        </Link>
-      </section>
-      <nav className="items-center gap-5 font-normal text-sm xl:text-base hidden lg:flex">
-        <Link href={"/"}>Home</Link>
-        <div className="group relative">
-          <Link href={"/about"} className="flex items-center gap-1">
-            About
-            <span className="group-hover:block hidden">
-              <MdKeyboardArrowUp />
-            </span>
-            <span className="group-hover:hidden block">
-              <MdKeyboardArrowDown />
-            </span>
-          </Link>
-          <div className="invisible border border-black/8 absolute left-1/2 top-full z-20 mt-3 w-max -translate-x-1/2 rounded-xl bg-white px-4 py-3 text-sm text-black opacity-0 shadow-lg transition-all duration-200 group-hover:visible group-hover:opacity-100">
-            <Link
-              href={"/locations"}
-              className="flex items-center gap-1 text-lg"
-            >
-              Location
-              <MdKeyboardArrowRight className="text-lg" />
-            </Link>
-            <hr className="my-2 border-t border-gray-300" />
-            <section className="grid grid-cols-2 gap-3">
-              <div>
-                <Link
-                  href={"/uk-consultant"}
-                  className="flex items-center gap-2 mt-5"
-                >
-                  {/* <Image
-                                        src={"/icons/uk-flag.png"}
-                                        alt="uk flag"
-                                        height={20}
-                                        width={20}
-                                    /> */}
-                  UK Educational Consultant
-                  <MdKeyboardArrowRight className="text-lg" />
-                </Link>
-              </div>
-              <div>
-                <Link
-                  href={"/bd-consultant"}
-                  className="flex items-center gap-2 mt-5"
-                >
-                  {/* <Image
-                                        src={"/icons/bd-flag.png"}
-                                        alt="bd flag"
-                                        height={20}
-                                        width={20}
-                                    /> */}
-                  BD Educational Consultant
-                  <MdKeyboardArrowRight className="text-lg" />
-                </Link>
-              </div>
-            </section>
-            <hr className="my-5 border-t border-gray-300" />
-            <section className="grid grid-cols-2 space-y-5 items-center">
-              <Link
-                href={"/team"}
-                className="text-[16px] flex items-center gap-2"
-              >
-                {/* <Image
-                                    src={"/icons/team.png"}
-                                    alt="team"
-                                    height={30}
-                                    width={30}
-                                /> */}
-                Our Team
-                <MdKeyboardArrowRight className="text-lg" />
-              </Link>
-              <Link
-                href={"/scholarship"}
-                className="text-[16px] flex items-center gap-2"
-              >
-                {/* <Image
-                                    src={"/icons/scholarship.png"}
-                                    alt="schoolarship"
-                                    height={30}
-                                    width={30}
-                                /> */}
-                Scholarship
-                <MdKeyboardArrowRight className="text-lg" />
-              </Link>
-              <Link
-                href={"/credentials"}
-                className="text-[16px] flex items-center gap-2"
-              >
-                {/* <Image
-                                    src={"/icons/medal.png"}
-                                    alt="credentials"
-                                    height={30}
-                                    width={30}
-                                /> */}
-                Our Credentials
-                <MdKeyboardArrowRight className="text-lg" />
-              </Link>
-              <Link
-                href={"/partners"}
-                className="text-[16px] flex items-center gap-2"
-              >
-                {/* <Image
-                                    src={"/icons/partners.png"}
-                                    alt="partners"
-                                    height={30}
-                                    width={30}
-                                /> */}
-                Our Partners
-                <MdKeyboardArrowRight className="text-lg" />
-              </Link>
-            </section>
-            <hr className="my-5 border-t border-gray-300" />
-            <section className="grid grid-cols-2 space-y-5 items-center">
-              <Link
-                href={"/universities-partner"}
-                className="text-[16px] flex items-center gap-2"
-              >
-                {/* <Image
-                                    src={"/icons/mortarboard.png"}
-                                    alt="Partner Universities"
-                                    height={30}
-                                    width={30}
-                                /> */}
-                Partner Universities
-                <MdKeyboardArrowRight className="text-lg" />
-              </Link>
-              <Link
-                href={"/become-partner"}
-                className="text-[16px] flex items-center gap-2"
-              >
-                {/* <Image
-                                    src={"/icons/partners.png"}
-                                    alt="Become a Partner"
-                                    height={30}
-                                    width={30}
-                                /> */}
-                Become a Partner
-                <MdKeyboardArrowRight className="text-lg" />
-              </Link>
-              <Link
-                href={"/testimonials"}
-                className="text-[16px] flex items-center gap-2"
-              >
-                {/* <Image
-                                    src={"/icons/testimonial.png"}
-                                    alt="testimonials"
-                                    height={30}
-                                    width={30}
-                                /> */}
-                Testimonials
-                <MdKeyboardArrowRight className="text-lg" />
-              </Link>
-              <Link
-                href={"/study-abroad-from-nigeria"}
-                className="text-[16px] flex items-center gap-2"
-              >
-                {/* <Image
-                                    src={"/icons/nigeria-flag.png"}
-                                    alt="Study Abroad From Nigeria"
-                                    height={30}
-                                    width={30}
-                                /> */}
-                Study Abroad From Nigeria
-                <MdKeyboardArrowRight className="text-lg" />
-              </Link>
-            </section>
-            <Link
-              href={"/about"}
-              className="flex items-center gap-2 w-full justify-center rounded-xl bg-black/5 shadow-sm hover:bg-[#0D5F2B] text-lg mt-2 hover:text-white text-black duration-200 border border-black/10 py-5 hover:pb-8"
-            >
-              About Eduvisors
-              <MdKeyboardArrowRight className="text-lg" />
-            </Link>
-          </div>
-        </div>
-        <Link href={"/study-abroad"} className="group flex items-center gap-1">
-          Study Abroad
-          <span className="group-hover:block hidden">
-            <MdKeyboardArrowUp />
-          </span>
-          <span className="group-hover:hidden block">
-            <MdKeyboardArrowDown />
-          </span>
-        </Link>
-        <Link href={"/resources"} className="group flex items-center gap-1">
-          Resources
-          <span className="group-hover:block hidden">
-            <MdKeyboardArrowUp />
-          </span>
-          <span className="group-hover:hidden block">
-            <MdKeyboardArrowDown />
-          </span>
-        </Link>
-        <Link href={"/events"}>Events</Link>
-        <Link href={"/universities"} className="group flex items-center gap-1">
-          Popular University
-          <span className="group-hover:block hidden">
-            <MdKeyboardArrowUp />
-          </span>
-          <span className="group-hover:hidden block">
-            <MdKeyboardArrowDown />
-          </span>
-        </Link>
-        <Link href={"/contact"}>Contact</Link>
-      </nav>
-      <section className="hidden lg:block">
-        <Link
-          href={"/apply-now"}
-          className="bg-[#0D5F2B] hover:bg-white/80 flex hover:text-black/80 hover:shadow-lg duration-300 hover:scale-102 px-4 py-2.5 rounded-full text-white text-sm font-semibold"
-        >
-          Apply Now
-        </Link>
-      </section>
-      <section
-        onClick={() => setOpen(!open)}
-        className="lg:hidden cursor-pointer"
-      >
-        {open ? <X /> : <Menu />}
-        <div className="relative">
-          {open && (
-            <div className="absolute top-1 right-1 border bg-white p-5 rounded-2xl border-black/20">
-              <nav className="flex flex-col space-y-2">
-                <Link className="text-nowrap" href={"/"}>
-                  Home
-                </Link>
-                <Link className="text-nowrap" href={"/about"}>
-                  About
-                </Link>
-                <Link className="text-nowrap" href={"/study-abroad"}>
-                  Study Abroad
-                </Link>
-                <Link className="text-nowrap" href={"/resources"}>
-                  Resources
-                </Link>
-                <Link className="text-nowrap" href={"/events"}>
-                  Events
-                </Link>
-                <Link className="text-nowrap" href={"/universities"}>
-                  Popular University
-                </Link>
-                <Link className="text-nowrap" href={"/contact"}>
-                  Contact
-                </Link>
-                <Link
-                  href={"/apply-now"}
-                  className="bg-[#0D5F2B] hover:bg-white/80 justify-center flex hover:text-black/80 hover:shadow-lg duration-300 hover:scale-102 px-4 py-2.5 rounded-full text-white text-sm font-semibold"
-                >
-                  Apply Now
-                </Link>
-              </nav>
+const navData = [
+    { name: "Home", href: "/" },
+    {
+        name: "About",
+        href: "about",
+        children: [
+            { name: "Our Mission", href: "#" },
+            { name: "Our Team", href: "#" },
+            { name: "Gallery", href: "#" },
+        ],
+    },
+    {
+        name: "Study Abroad",
+        href: "study-abroad",
+        children: [
+            { name: "Study in the Signapore", href: "#" },
+            { name: "Study in the China", href: "#" },
+            { name: "Study in the Japan", href: "#" },
+            { name: "Study in the South Korea", href: "#" },
+            { name: "Study in the Malaysia", href: "#" },
+        ],
+    },
+    {
+        name: "Resources",
+        href: "resources",
+        children: [
+            { name: "UK", href: "#" },
+            { name: "USA", href: "#" },
+            { name: "Canada", href: "#" },
+            { name: "Australia", href: "#" },
+        ],
+    },
+    { name: "Events", href: "events" },
+
+    {
+        name: "Popular University",
+        href: "universities",
+        children: [
+            { name: "National University of Singapore", href: "#" },
+            {
+                name: "University of Science and Technology of China",
+                href: "#",
+            },
+            { name: "University of Tokyo", href: "#" },
+            { name: "Seoul National University", href: "#" },
+            { name: "University of Malaya", href: "#" },
+            { name: "Singapore University of Social Sciences", href: "#" },
+        ],
+    },
+    { name: "Contact", href: "contact" },
+];
+
+const Navbar = () => {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [activeDropdown, setActiveDropdown] = useState(null);
+    const [mobileExpanded, setMobileExpanded] = useState(null);
+
+    const toggleMobileDropdown = (idx) => {
+        setMobileExpanded(mobileExpanded === idx ? null : idx);
+    };
+
+    return (
+        <nav className="fixed w-full z-50 top-4 px-4 sm:px-8">
+            <div className="container mx-auto relative">
+                <div className="flex items-center justify-between px-4 py-3 rounded-2xl border border-blue-500/30 backdrop-blur-xl bg-blue-900/70 shadow-2xl">
+                    <Link
+                        href={"/"}
+                        className="flex items-center gap-2 bg-white rounded-lg"
+                    >
+                        <Image
+                            src={"/logo/logo.png"}
+                            alt="pec edu logo"
+                            height={50}
+                            width={100}
+                        />
+                    </Link>
+
+                    <div className="hidden lg:flex items-center lg:gap-4 xl:gap-8">
+                        {navData.map((item, idx) => (
+                            <div
+                                key={idx}
+                                className="relative group"
+                                onMouseEnter={() => setActiveDropdown(idx)}
+                                onMouseLeave={() => setActiveDropdown(null)}
+                            >
+                                <Link
+                                    href={item.href}
+                                    className="flex items-center gap-1 text-sm font-medium text-white/90 hover:text-blue-500 transition-all py-2"
+                                >
+                                    {item.name}
+                                    {item.children && (
+                                        <ChevronDown
+                                            size={14}
+                                            className={`transition-transform duration-300 ${activeDropdown === idx ? "rotate-180" : ""}`}
+                                        />
+                                    )}
+                                </Link>
+
+                                <AnimatePresence>
+                                    {item.children &&
+                                        activeDropdown === idx && (
+                                            <motion.div
+                                                initial={{
+                                                    opacity: 0,
+                                                    y: 10,
+                                                    scale: 0.95,
+                                                }}
+                                                animate={{
+                                                    opacity: 1,
+                                                    y: 0,
+                                                    scale: 1,
+                                                }}
+                                                exit={{
+                                                    opacity: 0,
+                                                    y: 10,
+                                                    scale: 0.95,
+                                                }}
+                                                className="absolute top-full left-0 mt-2 w-56 bg-white/95 backdrop-blur-2xl rounded-xl shadow-2xl border border-white/20 p-2"
+                                            >
+                                                {item?.children?.map(
+                                                    (child, cIdx) => (
+                                                        <Link
+                                                            key={cIdx}
+                                                            href={child.href}
+                                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-500 rounded-lg transition-colors"
+                                                        >
+                                                            {child.name}
+                                                        </Link>
+                                                    ),
+                                                )}
+                                            </motion.div>
+                                        )}
+                                </AnimatePresence>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="hidden lg:block">
+                        <Link
+                            href={"/apply-now"}
+                            className="px-4 flex items-center gap-1 py-2.5 bg-white/10 text-white rounded-xl font-medium text-sm hover:bg-white/20 transition-all transform hover:scale-105 shadow-lg shadow-green-900/20"
+                        >
+                            Apply Now
+                        </Link>
+                    </div>
+
+                    <button
+                        className="lg:hidden text-white p-2"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    >
+                        {isMobileMenuOpen ? (
+                            <X size={28} />
+                        ) : (
+                            <Menu size={28} />
+                        )}
+                    </button>
+                </div>
+
+                <AnimatePresence>
+                    {isMobileMenuOpen && (
+                        <motion.div
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            className="absolute top-full left-0 bg-blue-900/30 right-0 mt-3 lg:hidden  backdrop-blur-2xl rounded-3xl border border-white/30 shadow-2xl overflow-hidden p-4"
+                        >
+                            <div className="flex flex-col gap-2">
+                                {navData.map((item, idx) => (
+                                    <div
+                                        key={idx}
+                                        className="border-b border-gray-100 last:border-0"
+                                    >
+                                        <button
+                                            onClick={() =>
+                                                item.children
+                                                    ? toggleMobileDropdown(idx)
+                                                    : null
+                                            }
+                                            className="w-full flex items-center justify-between py-4 px-2 text-white font-semibold"
+                                        >
+                                            {item.name}
+                                            {item.children && (
+                                                <ChevronDown
+                                                    size={18}
+                                                    className={`transition-transform ${mobileExpanded === idx ? "rotate-180" : ""}`}
+                                                />
+                                            )}
+                                        </button>
+
+                                        <AnimatePresence>
+                                            {item.children &&
+                                                mobileExpanded === idx && (
+                                                    <motion.div
+                                                        initial={{
+                                                            height: 0,
+                                                            opacity: 0,
+                                                        }}
+                                                        animate={{
+                                                            height: "auto",
+                                                            opacity: 1,
+                                                        }}
+                                                        exit={{
+                                                            height: 0,
+                                                            opacity: 0,
+                                                        }}
+                                                        className="overflow-hidden bg-blue-900/50 rounded-xl mb-2"
+                                                    >
+                                                        <div className="flex flex-col py-2 px-4 gap-3">
+                                                            {item.children.map(
+                                                                (
+                                                                    child,
+                                                                    cIdx,
+                                                                ) => (
+                                                                    <a
+                                                                        key={
+                                                                            cIdx
+                                                                        }
+                                                                        href={
+                                                                            child.href
+                                                                        }
+                                                                        className="text-white text-sm py-1"
+                                                                    >
+                                                                        {
+                                                                            child.name
+                                                                        }
+                                                                    </a>
+                                                                ),
+                                                            )}
+                                                        </div>
+                                                    </motion.div>
+                                                )}
+                                        </AnimatePresence>
+                                    </div>
+                                ))}
+                                <Link
+                                    href={"/apply-now"}
+                                    className="px-4 flex items-center gap-1 py-2.5 bg-black/10 text-white justify-center rounded-xl font-semibold"
+                                >
+                                    Apply Now
+                                </Link>
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
-          )}
-        </div>
-      </section>
-    </section>
-  );
-}
+        </nav>
+    );
+};
+
+export default Navbar;
