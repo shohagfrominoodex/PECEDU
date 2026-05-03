@@ -1789,6 +1789,10 @@
     padding-right: calc(var(--spacing) * 7);
   }
 
+  .pb-5 {
+    padding-bottom: calc(var(--spacing) * 5);
+  }
+
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
   }
@@ -2989,6 +2993,18 @@
   @media (min-width: 64rem) {
     .lg\:left-0 {
       left: calc(var(--spacing) * 0);
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .lg\:left-60 {
+      left: calc(var(--spacing) * 60);
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .lg\:left-70 {
+      left: calc(var(--spacing) * 70);
     }
   }
 
