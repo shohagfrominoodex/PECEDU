@@ -16,11 +16,11 @@ const HeroAnimation = () => {
     ];
 
     return (
-        <section className="px-4 overflow-x-hidden min-h-screen py-10 md:py-20 lg:py-40 bg-[url(/images/hero-background.webp)] xl:bg-left bg-left bg-no-repeat relative bg-cover flex items-center">
+        <section className="px-4 overflow-hidden min-h-screen py-10 md:py-20 lg:py-40 bg-[url(/images/hero-background.webp)] xl:bg-left bg-left bg-no-repeat relative bg-cover flex items-center">
             <div className="absolute inset-0 bg-black/40"></div>
 
             <section className="flex flex-col-reverse lg:flex-row max-w-7xl mx-auto relative justify-between gap-10 w-full">
-                <div className="absolute bottom-30.5 md:bottom-25.5 w-90 md:w-120 lg:w-150 2xl:w-170 lg:bottom-20 2xl:bottom-10 lg:left-75 left-1/2 xl:left-94 2xl:left-52 -translate-x-1/2 z-0 animate-spin-slow opacity-80 lg:opacity-100">
+                <div className="absolute bottom-30.5 overflow-hidden md:bottom-25.5 w-90 md:w-120 lg:w-150 2xl:w-170 lg:bottom-20 2xl:bottom-10 lg:left-75 left-1/2 xl:left-94 2xl:left-52 -translate-x-1/2 z-0 animate-spin-slow opacity-80 lg:opacity-100">
                     <Image
                         src={"/images/london-wheel.png"}
                         width={800}
@@ -31,15 +31,6 @@ const HeroAnimation = () => {
                 </div>
 
                 <div className="relative flex items-center justify-center w-full lg:w-[75%] 2xl:w-1/2 h-100 md:h-125 lg:h-150 z-10">
-                    {/* <div className="relative z-10 bottom-15 hidden left-1/2 -translate-1/2 w-33 h-33 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full border-4 border-white/20 overflow-hidden shadow-2xl bg-gray-200">
-                        <Image
-                            src="/images/disscuss.webp"
-                            fill
-                            alt="Student"
-                            className="object-cover"
-                        />
-                    </div> */}
-
                     <div className="absolute bottom-10.5 md:bottom-3 lg:-bottom-3 2xl:-bottom-6 left-1/2 2xl:left-50 -translate-x-1/2 w-full h-full flex items-center justify-center animate-spin-slow hover:[animation-play-state:paused] group">
                         {logos.map((logo, index) => {
                             const rotationAngle = (index * 360) / logos.length;
@@ -94,7 +85,7 @@ const HeroAnimation = () => {
                             Experience Excellence{" "}
                             <br className="hidden md:block" /> in Education{" "}
                             <br /> Study in{" "}
-                            <span className="text-blue-500 bg-white px-2 rounded-md">
+                            <span className="text-brand-accent bg-white px-2 rounded-md">
                                 Denmark
                             </span>
                         </motion.h1>

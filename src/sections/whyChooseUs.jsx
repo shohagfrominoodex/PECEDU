@@ -13,27 +13,27 @@ const features = [
     {
         title: "Priority Processing",
         desc: "Eduvisors assists students in selecting colleges, completing applications, financial aid, and more, helping them reach their goals.",
-        icon: <Headphones className="text-green-400" size={28} />,
+        icon: <Headphones className="text-white" size={28} />,
     },
     {
         title: "Global Recognition",
         desc: "Eduvisors is a certified agency offering advice, service, info, and resources to help student clients make informed decisions.",
-        icon: <Award className="text-blue-400" size={28} />,
+        icon: <Award className="text-white" size={28} />,
     },
     {
         title: "A Successful Team",
         desc: "Eduvisors provides reliable educational consulting. Our experienced advisors guarantee fair, ethical services, delivering the best results.",
-        icon: <Users className="text-purple-400" size={28} />,
+        icon: <Users className="text-white" size={28} />,
     },
     {
         title: "Trusted by World-Renowned Universities",
         desc: "Eduvisors is an expert educational consultancy providing exceptional support for students studying abroad around the world.",
-        icon: <GraduationCap className="text-orange-400" size={28} />,
+        icon: <GraduationCap className="text-white" size={28} />,
     },
     {
         title: "Personalized Assistance for Students",
         desc: "Eduvisors provides personalized help for students who want to study abroad. We give custom guidance on choosing the right destination.",
-        icon: <HeartHandshake className="text-pink-400" size={28} />,
+        icon: <HeartHandshake className="text-white" size={28} />,
     },
 ];
 
@@ -56,7 +56,7 @@ const WhyChooseUs = () => {
     };
 
     return (
-        <section className="relative py-24 bg-blue-950 overflow-hidden">
+        <section className="relative py-24 bg-foreground overflow-hidden">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-green-600/10 rounded-full blur-[150px] -z-10" />
 
             <div className="container mx-auto px-4">
@@ -91,7 +91,6 @@ const WhyChooseUs = () => {
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
-                        // viewport={{ once: true }}
                         className="lg:col-span-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
                     >
                         {features.map((item, idx) => (
@@ -99,12 +98,12 @@ const WhyChooseUs = () => {
                                 key={idx}
                                 variants={cardVariants}
                                 whileHover={{ y: -10 }}
-                                className="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 transition-all duration-300 group"
+                                className="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 transition-all duration-300 group"
                             >
                                 <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 border border-white/5 shadow-xl">
                                     {item.icon}
                                 </div>
-                                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-green-400 transition-colors">
+                                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-brand-contrast transition-colors">
                                     {item.title}
                                 </h3>
                                 <p className="text-gray-400 text-sm leading-relaxed">

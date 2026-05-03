@@ -10,7 +10,7 @@ export default function Button({ children }) {
             className="w-fit"
         >
             <Link
-                className="bg-white text-xl hover:bg-blue-900/90 hover:text-white duration-300 text-blue-500 block mt-5 font-medium px-8 py-4 rounded-full shadow-lg cursor-pointer"
+                className="bg-white text-xl hover:bg-brand-accent hover:text-brand-contrast duration-300 text-brand-primary block mt-5 font-medium px-8 py-4 rounded-full shadow-lg cursor-pointer"
                 href={"/apply-now"}
             >
                 {children}

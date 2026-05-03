@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown, Menu, MoveUpRight, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import ToggleButton from "./toggleButton";
 
 const navData = [
     { name: "Home", href: "/" },
@@ -28,18 +29,6 @@ const navData = [
         ],
     },
     {
-        name: "Resources",
-        href: "resources",
-        children: [
-            { name: "UK", href: "#" },
-            { name: "USA", href: "#" },
-            { name: "Canada", href: "#" },
-            { name: "Australia", href: "#" },
-        ],
-    },
-    { name: "Events", href: "events" },
-
-    {
         name: "Popular University",
         href: "universities",
         children: [
@@ -54,6 +43,18 @@ const navData = [
             { name: "Singapore University of Social Sciences", href: "#" },
         ],
     },
+    {
+        name: "Travel & Tours",
+        href: "travel-tours",
+        children: [
+            { name: "UK", href: "#" },
+            { name: "USA", href: "#" },
+            { name: "Canada", href: "#" },
+            { name: "Australia", href: "#" },
+        ],
+    },
+    { name: "Blogs", href: "blogs" },
+
     { name: "Contact", href: "contact" },
 ];
 
@@ -69,7 +70,7 @@ const Navbar = () => {
     return (
         <nav className="fixed w-full z-50 top-4 px-4 sm:px-8">
             <div className="container mx-auto relative">
-                <div className="flex items-center justify-between px-4 py-3 rounded-2xl border border-blue-500/30 backdrop-blur-xl bg-blue-900/70 shadow-2xl">
+                <div className="flex items-center justify-between px-4 py-3 rounded-2xl border border-[var(--nav-border)] backdrop-blur-xl bg-[var(--nav-background)] shadow-2xl transition-colors duration-200">
                     <Link
                         href={"/"}
                         className="flex items-center gap-2 bg-white rounded-lg"
@@ -92,7 +93,7 @@ const Navbar = () => {
                             >
                                 <Link
                                     href={item.href}
-                                    className="flex items-center gap-1 text-sm font-medium text-white/90 hover:text-blue-500 transition-all py-2"
+                                    className="flex items-center gap-1 text-sm font-medium text-[var(--nav-text)] hover:text-brand-muted transition-all py-2"
                                 >
                                     {item.name}
                                     {item.children && (
@@ -129,7 +130,7 @@ const Navbar = () => {
                                                         <Link
                                                             key={cIdx}
                                                             href={child.href}
-                                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-500 rounded-lg transition-colors"
+                                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-secondary hover:text-brand-primary rounded-lg transition-colors"
                                                         >
                                                             {child.name}
                                                         </Link>
@@ -142,13 +143,19 @@ const Navbar = () => {
                         ))}
                     </div>
 
-                    <div className="hidden lg:block">
-                        <Link
-                            href={"/apply-now"}
-                            className="px-4 flex items-center gap-1 py-2.5 bg-white/10 text-white rounded-xl font-medium text-sm hover:bg-white/20 transition-all transform hover:scale-105 shadow-lg shadow-green-900/20"
-                        >
-                            Apply Now
-                        </Link>
+                    <div className="flex items-center gap-2">
+                        <div>
+                            <ToggleButton />
+                        </div>
+
+                        <div className="hidden lg:block">
+                            <Link
+                                href={"/apply-now"}
+                                className="px-4 flex items-center gap-1 py-2.5 bg-white/10 text-white rounded-xl font-medium text-sm hover:bg-white/20 transition-all transform hover:scale-105 shadow-lg shadow-black/20"
+                            >
+                                Apply Now
+                            </Link>
+                        </div>
                     </div>
 
                     <button
@@ -169,7 +176,7 @@ const Navbar = () => {
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}
-                            className="absolute top-full left-0 bg-blue-900/30 right-0 mt-3 lg:hidden  backdrop-blur-2xl rounded-3xl border border-white/30 shadow-2xl overflow-hidden p-4"
+                            className="absolute top-full left-0 bg-[var(--nav-background)] right-0 mt-3 lg:hidden backdrop-blur-2xl rounded-3xl border border-[var(--nav-border)] shadow-2xl overflow-hidden p-4"
                         >
                             <div className="flex flex-col gap-2">
                                 {navData.map((item, idx) => (
@@ -210,7 +217,7 @@ const Navbar = () => {
                                                             height: 0,
                                                             opacity: 0,
                                                         }}
-                                                        className="overflow-hidden bg-blue-900/50 rounded-xl mb-2"
+                                                        className="overflow-hidden bg-black/15 rounded-xl mb-2"
                                                     >
                                                         <div className="flex flex-col py-2 px-4 gap-3">
                                                             {item.children.map(

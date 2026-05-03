@@ -5,7 +5,7 @@ export default function Partner({ partner }) {
         <a
             href={partner.url}
             target="_blank"
-            className="shrink-0 w-48 h-24 flex items-center justify-center p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 hover:border-white/30 transition-all duration-300 group"
+            className="shrink-0 w-48 h-24 flex items-center justify-center p-8 rounded-2xl bg-black/5 border border-black/10 backdrop-blur-md hover:bg-black/10 hover:border-black/20 transition-all duration-300 group"
         >
             <Image
                 src={partner.logo}

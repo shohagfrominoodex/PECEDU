@@ -46,14 +46,14 @@ const cardData = [
 
 const BenefitsSection = () => {
     return (
-        <section className="lg:py-24 pb-20 px-4 bg-blue-900 overflow-hidden">
+        <section className="lg:py-24 py-10 px-4 bg-foreground text-brand-contrast overflow-hidden transition-colors duration-200">
             <div className="container mx-auto">
                 <div className="text-center">
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="text-3xl md:text-5xl font-bold tracking-tight mb-6 bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent"
+                        className="text-3xl md:text-5xl font-bold tracking-tight mb-6 text-brand-contrast"
                     >
                         We Help Individual Become <br /> their Best Version
                     </motion.h1>
@@ -62,7 +62,7 @@ const BenefitsSection = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
-                        className="max-w-2xl mx-auto text-lg text-gray-200 mb-10 leading-relaxed"
+                        className="max-w-2xl mx-auto text-lg text-brand-soft-text mb-10 leading-relaxed"
                     >
                         PecEdu is driven by a passion to help students reach
                         their educational goals.

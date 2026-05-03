@@ -1,19 +1,17 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
-
     const footerLinks = [
         {
             title: "Quick Links",
             links: ["About", "Study Abroad", "Resources", "Events", "Contact"],
         },
         {
-            title: "Study Abroad",
+            title: "University",
             links: [
                 "Study in Singapore",
                 "Study in China",
@@ -22,15 +20,18 @@ const Footer = () => {
                 "Study in Malaysia",
             ],
         },
-        { title: "Resources", links: ["Blog", "Events", "FAQ", "Support"] },
+        {
+            title: "Need Help?",
+            links: ["+880 1234-567890", "info@pecedu.com"],
+        },
     ];
 
     return (
-        <footer className="relative bg-[#060041] pt-20 pb-10 px-6 overflow-hidden">
+        <footer className="relative bg-foreground/95 md:py-20 md:pb-10 py-10 px-6 overflow-hidden border-t border-brand-accent/40">
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-150 h-75 bg-[#0b5d2e]/20 blur-[120px] rounded-full -z-10" />
 
             <div className="max-w-7xl mx-auto relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-10">
                     <div className="lg:col-span-2">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -45,11 +46,41 @@ const Footer = () => {
                                 PecEdu
                             </span>
                         </motion.div>
-                        <p className="text-gray-400 mb-8 max-w-sm leading-relaxed">
+                        <p className="text-gray-400 mb-5 max-w-sm leading-relaxed">
                             PecEdu is a leading educational consultancy firm
                             that helps students achieve their dreams of studying
                             abroad.
                         </p>
+                        <div className="flex items-center gap-2">
+                            <a
+                                href="#"
+                                target="_blank"
+                                className="text-gray-100 bg-brand-primary duration-300 hover:scale-110 rounded-full p-1.5"
+                            >
+                                <FaFacebook size={20} />
+                            </a>
+                            <a
+                                href="#"
+                                target="_blank"
+                                className="text-gray-100 bg-brand-primary duration-300 hover:scale-110 rounded-full p-1.5"
+                            >
+                                <FaLinkedin size={20} />
+                            </a>
+                            <a
+                                href="#"
+                                target="_blank"
+                                className="text-gray-100 bg-brand-primary duration-300 hover:scale-110 rounded-full p-1.5"
+                            >
+                                <FaInstagram size={20} />
+                            </a>
+                            <a
+                                href="#"
+                                target="_blank"
+                                className="text-gray-100 bg-brand-primary duration-300 hover:scale-110 rounded-full p-1.5"
+                            >
+                                <FaYoutube size={20} />
+                            </a>
+                        </div>
                     </div>
 
                     {footerLinks.map((section, idx) => (
@@ -77,33 +108,11 @@ const Footer = () => {
                     ))}
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-8 border-y border-white/5 mb-10">
-                    <div className="flex items-center gap-4 text-gray-400">
-                        <div className="p-3 bg-white/5 rounded-full">
-                            <MapPin size={20} strokeWidth={1} />
-                        </div>
-                        <p className="text-sm">Dhaka, Bangladesh</p>
-                    </div>
-                    <div className="flex items-center gap-4 text-gray-400">
-                        <div className="p-3 bg-white/5 rounded-full">
-                            <Phone size={20} strokeWidth={1} />
-                        </div>
-                        <a href="tel:+8801234567890" className="text-sm">
-                            +880 1234 567 890
-                        </a>
-                    </div>
-                    <div className="flex items-center gap-4 text-gray-400">
-                        <div className="p-3 bg-white/5 rounded-full">
-                            <Mail size={20} strokeWidth={1} />
-                        </div>
-                        <a href="mailto:info@pecedu.com" className="text-sm">
-                            info@pecedu.com
-                        </a>
-                    </div>
-                </div>
-
-                <div className="flex flex-col md:row justify-between items-center gap-6 text-gray-500 text-sm">
-                    <p>© {currentYear} PecEdu. All rights reserved.</p>
+                <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-gray-500 text-sm">
+                    <p>
+                        © {new Date().getFullYear()} PecEdu. All rights
+                        reserved.
+                    </p>
                     <div className="flex gap-8">
                         <a href="#" className="hover:text-white">
                             Privacy Policy

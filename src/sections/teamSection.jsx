@@ -9,7 +9,7 @@ import {
 } from "motion/react";
 
 const TeamSection = () => {
-    const benefits = [
+    const officials = [
         {
             id: 1,
             src: "/team/ceo.webp",
@@ -79,11 +79,11 @@ const TeamSection = () => {
     };
 
     return (
-        <section className="bg-linear-to-b from-blue-950 via-blue-950 to-blue-900 w-full">
+        <section className="bg-foreground w-full">
             <section className="w-full mx-auto lg:py-30 py-20 overflow-hidden relative">
                 <div className="mb-8">
-                    <p className="bg-blue-800 text-blue-100 rounded-full w-fit mx-auto px-5 py-2 text-lg font-semibold">
-                        Team Members
+                    <p className="text-white/60 uppercase bg-white/10 w-fit mx-auto px-4 py-2 rounded-full tracking-widest text-sm font-bold">
+                        Officials
                     </p>
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
@@ -110,8 +110,8 @@ const TeamSection = () => {
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                 >
-                    <div className="absolute left-0 top-0 bottom-0 w-15 lg:w-70 h-full bg-linear-to-r from-blue-950 to-transparent z-10 pointer-events-none"></div>
-                    <div className="absolute right-0 top-0 bottom-0 w-15 lg:w-70 bg-linear-to-l from-blue-950 to-transparent z-10 pointer-events-none"></div>
+                    <div className="absolute left-0 top-0 bottom-0 w-15 lg:w-70 h-full bg-linear-to-r from-foreground to-transparent z-10 pointer-events-none"></div>
+                    <div className="absolute right-0 top-0 bottom-0 w-15 lg:w-70 bg-linear-to-l from-foreground to-transparent z-10 pointer-events-none"></div>
                     <motion.div
                         ref={containerRef}
                         className="flex w-max cursor-grab active:cursor-grabbing touch-pan-y py-0"
@@ -127,7 +127,7 @@ const TeamSection = () => {
                                 key={set}
                                 className="flex gap-6 pr-6 shrink-0"
                             >
-                                {benefits.map((benefit) => (
+                                {officials.map((benefit) => (
                                     <section
                                         key={`${set}-${benefit.id}`}
                                         className="relative w-75 sm:w-75 h-100 group shrink-0"
@@ -143,29 +143,29 @@ const TeamSection = () => {
                                             />
                                         </section>
                                         <section
-                                            className="absolute inset-0 z-20 rounded-3xl bg-blue-200/80 p-5 opacity-0 pointer-events-none transform
+                                            className="absolute inset-0 z-20 rounded-3xl bg-brand-primary/80 p-5 opacity-0 pointer-events-none transform
                                                 translate-y-20 group-hover:opacity-100
                                                 group-hover:pointer-events-auto backdrop-blur-[10px]
                                                 group-hover:translate-y-0 transition-all ease-in-out
                                                 duration-500 flex flex-col justify-center"
                                         >
                                             <div className="self-start">
-                                                <span className="text-sm font-light px-3 py-1.5 bg-blue-100 text-blue-500 rounded-full">
+                                                <span className="text-sm font-light px-3 py-1.5 bg-blue-100 text-brand-primary rounded-full">
                                                     - Why Choose Us
                                                 </span>
                                             </div>
-                                            <h1 className="mt-5 font-medium text-3xl text-blue-500">
+                                            <h1 className="mt-5 font-medium text-3xl text-brand-contrast">
                                                 {benefit.title ||
                                                     `Eduvisors helps you find your perfect study
                                                     abroad destination.`}
                                             </h1>
-                                            <p className="mt-3 font-normal text-sm mb-16">
+                                            <p className="mt-3 font-normal text-sm mb-16 text-brand-soft-text">
                                                 We will help you choose the best
                                                 country for your academic and
                                                 personal goals.
                                             </p>
                                             <div className="absolute bottom-5 left-0 w-full px-6 flex justify-center">
-                                                <button className="w-full border border-blue-800/50 bg-blue-800 text-blue-100 shadow-lg cursor-pointer rounded-2xl px-4 py-3 font-medium transition-colors hover:bg-blue-800/80">
+                                                <button className="w-full border border-brand-primary bg-brand-primary/80 text-blue-100 shadow-lg cursor-pointer rounded-2xl px-4 py-3 font-medium transition-colors hover:bg-brand-primary/50">
                                                     Start your journey now!
                                                 </button>
                                             </div>

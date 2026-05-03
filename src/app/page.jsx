@@ -6,21 +6,21 @@ import GlobalClients from "@/sections/globalClientSection";
 import HeroAnimation from "@/sections/heroSection";
 import PartnerSection from "@/sections/partnerSection";
 import TeamSection from "@/sections/teamSection";
-import WhatWeDo from "@/sections/whatWeDo";
 import WhyChooseUs from "@/sections/whyChooseUs";
+import ServicesSection from "@/sections/servicesSection";
 
 const page = () => {
     return (
-        <div>
+        <div className="bg-background text-foreground transition-colors duration-200">
             <HeroAnimation />
             <AboutSection />
             <BenefitSection />
             <GlobalClients />
             <TeamSection />
-            <WhatWeDo />
+            <ServicesSection />
             <ComparisonSection />
-            <PartnerSection />
             <WhyChooseUs />
+            <PartnerSection />
             <BlogsSection />
         </div>
     );

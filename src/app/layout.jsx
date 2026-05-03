@@ -2,6 +2,7 @@ import Footer from "@/components/footer";
 import "./globals.css";
 import Header from "@/components/header";
 import { Chivo } from "next/font/google";
+import ThemeProvider from "@/components/themeProvider";
 
 const chivo = Chivo({
   subsets: ["latin"],
@@ -17,15 +18,21 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${chivo.className} h-full antialiased`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${chivo.className} h-full antialiased`}
+    >
       <body className={`min-h-full flex flex-col ${chivo.variable}`}>
-        <header className="sticky top-0 z-50">
-          <Header />
-        </header>
-        <main>{children}</main>
-        <footer>
-          <Footer />
-        </footer>
+        <ThemeProvider>
+          <header className="sticky top-0 z-50">
+            <Header />
+          </header>
+          <main>{children}</main>
+          <footer>
+            <Footer />
+          </footer>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -32,7 +32,7 @@ const AboutSection = ()=>{
                     duration: 0.5,
                     delay: 0.2
                 },
-                className: "bg-clip-text text-transparent bg-linear-to-r from-blue-900 to-blue-500 text-center text-3xl px-5 md:px-20 md:text-5xl font-semibold",
+                className: "bg-clip-text text-transparent bg-linear-to-r from-brand-accent to-brand-primary text-center text-3xl px-5 md:px-20 md:text-5xl font-semibold",
                 children: "Learn About The Best Study Abroad Deals With PecEdu"
             }, void 0, false, {
                 fileName: "[project]/src/sections/about.jsx",
@@ -52,7 +52,7 @@ const AboutSection = ()=>{
                     duration: 0.5,
                     delay: 0.2
                 },
-                className: "text-center text-xl text-gray-700 my-5 px-5",
+                className: "text-center text-xl text-foreground/75 my-5 px-5",
                 children: "We’re just a call away – get free expert guidance from the comfort of your home."
             }, void 0, false, {
                 fileName: "[project]/src/sections/about.jsx",
@@ -60,7 +60,7 @@ const AboutSection = ()=>{
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "lg:mt-20 mt-10 pb-30 px-4 max-w-full mx-auto relative bg-blue-900 to-white xl:rounded-t-[150px]",
+                className: "lg:mt-20 mt-10 pb-30 px-4 max-w-full mx-auto relative bg-brand-primary text-brand-contrast xl:rounded-t-[150px] transition-colors duration-200",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                     className: "max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 pt-20",
                     children: [
@@ -80,7 +80,7 @@ const AboutSection = ()=>{
                             className: "lg:w-6/12 w-full",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "py-2 px-4 bg-white rounded-full text-lg text-blue-500 font-semibold",
+                                    className: "py-2 px-4 bg-white rounded-full text-lg text-brand-primary font-semibold",
                                     children: "FEATURE"
                                 }, void 0, false, {
                                     fileName: "[project]/src/sections/about.jsx",
@@ -88,7 +88,7 @@ const AboutSection = ()=>{
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                    className: "text-3xl md:text-5xl font-bold tracking-tight mb-6 mt-6 text-blue-100",
+                                    className: "text-3xl md:text-5xl font-bold tracking-tight mb-6 mt-6 text-brand-contrast",
                                     children: "Your Global Journey Starts Here"
                                 }, void 0, false, {
                                     fileName: "[project]/src/sections/about.jsx",
@@ -96,7 +96,7 @@ const AboutSection = ()=>{
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "mt-5 text-lg text-blue-100 md:w-120",
+                                    className: "mt-5 text-lg text-brand-soft-text md:w-120",
                                     children: "At Eduvisors, we turn your study abroad dreams into reality. With 17+ years of expertise, personalized guidance, and trusted global university partnerships, we make every step from applications to visas smooth and stress-free. Your future deserves the best path, and we’re here to lead the way."
                                 }, void 0, false, {
                                     fileName: "[project]/src/sections/about.jsx",
@@ -105,7 +105,7 @@ const AboutSection = ()=>{
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                     href: "/about",
-                                    className: "underline mt-8 inline-flex text-blue-100 font-medium",
+                                    className: "underline mt-8 inline-flex text-brand-contrast font-medium",
                                     children: "Read about us"
                                 }, void 0, false, {
                                     fileName: "[project]/src/sections/about.jsx",
@@ -117,7 +117,7 @@ const AboutSection = ()=>{
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/blogs",
-                                            className: "px-5 py-2 bg-blue-950 text-white border border-blue-700/70 backdrop-blur-lg font-semibold rounded-xl hover:border-blue-700/40 duration-300 hover:bg-blue-700 transition-all",
+                                            className: "px-5 py-2 bg-brand-accent text-brand-contrast border border-white/25 backdrop-blur-lg font-semibold rounded-xl hover:bg-brand-secondary hover:text-foreground duration-300 transition-all",
                                             children: "Hot Courses"
                                         }, void 0, false, {
                                             fileName: "[project]/src/sections/about.jsx",
@@ -125,7 +125,7 @@ const AboutSection = ()=>{
                                             columnNumber: 29
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                            className: "px-5 py-2 bg-blue-950 text-white border border-blue-700/70 backdrop-blur-lg font-semibold rounded-xl hover:border-blue-700/40 duration-300 hover:bg-blue-700 transition-all",
+                                            className: "px-5 py-2 bg-brand-accent text-brand-contrast border border-white/25 backdrop-blur-lg font-semibold rounded-xl hover:bg-brand-secondary hover:text-foreground duration-300 transition-all",
                                             href: "/universities",
                                             children: "Popular University"
                                         }, void 0, false, {
@@ -134,7 +134,7 @@ const AboutSection = ()=>{
                                             columnNumber: 29
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                            className: "px-5 py-2 bg-blue-950 text-white border border-blue-700/70 backdrop-blur-lg font-semibold rounded-xl hover:border-blue-700/40 duration-300 hover:bg-blue-700 transition-all",
+                                            className: "px-5 py-2 bg-brand-accent text-brand-contrast border border-white/25 backdrop-blur-lg font-semibold rounded-xl hover:bg-brand-secondary hover:text-foreground duration-300 transition-all",
                                             href: "/counselling",
                                             children: "Free Counselling"
                                         }, void 0, false, {
@@ -143,7 +143,7 @@ const AboutSection = ()=>{
                                             columnNumber: 29
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                            className: "px-5 py-2 bg-blue-950 text-white border border-blue-700/70 backdrop-blur-lg font-semibold rounded-xl hover:border-blue-700/40 duration-300 hover:bg-blue-700 transition-all",
+                                            className: "px-5 py-2 bg-brand-accent text-brand-contrast border border-white/25 backdrop-blur-lg font-semibold rounded-xl hover:bg-brand-secondary hover:text-foreground duration-300 transition-all",
                                             href: "/test",
                                             children: "Popular Tools"
                                         }, void 0, false, {
@@ -152,7 +152,7 @@ const AboutSection = ()=>{
                                             columnNumber: 29
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                            className: "px-5 py-2 bg-blue-950 text-white border border-blue-700/70 backdrop-blur-lg font-semibold rounded-xl hover:border-blue-700/40 duration-300 hover:bg-blue-700 transition-all",
+                                            className: "px-5 py-2 bg-brand-accent text-brand-contrast border border-white/25 backdrop-blur-lg font-semibold rounded-xl hover:bg-brand-secondary hover:text-foreground duration-300 transition-all",
                                             href: "/mock-test",
                                             children: "Free Mock Test"
                                         }, void 0, false, {
@@ -285,7 +285,7 @@ const cardData = [
 ];
 const BenefitsSection = ()=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "lg:py-24 pb-20 px-4 bg-blue-900 overflow-hidden",
+        className: "lg:py-24 pb-20 px-4 bg-brand-primary text-brand-contrast overflow-hidden transition-colors duration-200",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "container mx-auto",
             children: [
@@ -305,7 +305,7 @@ const BenefitsSection = ()=>{
                                 duration: 0.5,
                                 delay: 0.2
                             },
-                            className: "text-3xl md:text-5xl font-bold tracking-tight mb-6 bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent",
+                            className: "text-3xl md:text-5xl font-bold tracking-tight mb-6 text-brand-contrast",
                             children: [
                                 "We Help Individual Become ",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
@@ -333,7 +333,7 @@ const BenefitsSection = ()=>{
                                 duration: 0.5,
                                 delay: 0.4
                             },
-                            className: "max-w-2xl mx-auto text-lg text-gray-200 mb-10 leading-relaxed",
+                            className: "max-w-2xl mx-auto text-lg text-brand-soft-text mb-10 leading-relaxed",
                             children: "PecEdu is driven by a passion to help students reach their educational goals."
                         }, void 0, false, {
                             fileName: "[project]/src/sections/benefitSection.jsx",
@@ -609,7 +609,7 @@ function Button({ children }) {
         },
         className: "w-fit",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-            className: "bg-white text-xl hover:bg-blue-900/90 hover:text-white duration-300 text-blue-500 block mt-5 font-medium px-8 py-4 rounded-full shadow-lg cursor-pointer",
+            className: "bg-white text-xl hover:bg-brand-accent hover:text-brand-contrast duration-300 text-brand-primary block mt-5 font-medium px-8 py-4 rounded-full shadow-lg cursor-pointer",
             href: "/apply-now",
             children: children
         }, void 0, false, {
@@ -849,14 +849,14 @@ const FEATURES = [
 ];
 function ComparisonSection() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "py-20 pt-20 px-4 bg-blue-950",
+        className: "py-20 pt-20 px-4 bg-white",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "max-w-5xl mx-auto",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "max-w-7xl mx-auto px-6 mb-10 text-center",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "text-white/60 uppercase bg-white/10 w-fit mx-auto px-4 py-2 rounded-full tracking-widest text-sm font-bold",
+                        className: "text-black/60 uppercase bg-black/10 w-fit mx-auto px-4 py-2 rounded-full tracking-widest text-sm font-bold",
                         children: "Comparison"
                     }, void 0, false, {
                         fileName: "[project]/src/sections/comparisonSection.jsx",
@@ -1456,7 +1456,7 @@ const HeroAnimation = ()=>{
                                             " Study in",
                                             " ",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "text-blue-500 bg-white px-2 rounded-md",
+                                                className: "text-brand-accent bg-white px-2 rounded-md",
                                                 children: "Denmark"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/sections/heroSection.jsx",
@@ -1809,7 +1809,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$mo
 ;
 ;
 const TeamSection = ()=>{
-    const benefits = [
+    const officials = [
         {
             id: 1,
             src: "/team/ceo.webp",
@@ -1876,8 +1876,8 @@ const TeamSection = ()=>{
                     className: "mb-8",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "bg-blue-800 text-blue-100 rounded-full w-fit mx-auto px-5 py-2 text-lg font-semibold",
-                            children: "Team Members"
+                            className: "text-white/60 uppercase bg-white/10 w-fit mx-auto px-4 py-2 rounded-full tracking-widest text-sm font-bold",
+                            children: "Officials"
                         }, void 0, false, {
                             fileName: "[project]/src/sections/teamSection.jsx",
                             lineNumber: 85,
@@ -1967,7 +1967,7 @@ const TeamSection = ()=>{
                                 5
                             ].map((set)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                                     className: "flex gap-6 pr-6 shrink-0",
-                                    children: benefits.map((benefit)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                                    children: officials.map((benefit)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                                             className: "relative w-75 sm:w-75 h-100 group shrink-0",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1990,12 +1990,12 @@ const TeamSection = ()=>{
                                                     columnNumber: 41
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                                                    className: "absolute inset-0 z-20 rounded-3xl bg-blue-200/80 p-5 opacity-0 pointer-events-none transform   translate-y-20 group-hover:opacity-100   group-hover:pointer-events-auto backdrop-blur-[10px]   group-hover:translate-y-0 transition-all ease-in-out   duration-500 flex flex-col justify-center",
+                                                    className: "absolute inset-0 z-20 rounded-3xl bg-brand-primary/80 p-5 opacity-0 pointer-events-none transform   translate-y-20 group-hover:opacity-100   group-hover:pointer-events-auto backdrop-blur-[10px]   group-hover:translate-y-0 transition-all ease-in-out   duration-500 flex flex-col justify-center",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "self-start",
                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "text-sm font-light px-3 py-1.5 bg-blue-100 text-blue-500 rounded-full",
+                                                                className: "text-sm font-light px-3 py-1.5 bg-blue-100 text-brand-primary rounded-full",
                                                                 children: "- Why Choose Us"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/sections/teamSection.jsx",
@@ -2008,7 +2008,7 @@ const TeamSection = ()=>{
                                                             columnNumber: 45
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                                            className: "mt-5 font-medium text-3xl text-blue-500",
+                                                            className: "mt-5 font-medium text-3xl text-brand-contrast",
                                                             children: benefit.title || `Eduvisors helps you find your perfect study
                                                     abroad destination.`
                                                         }, void 0, false, {
@@ -2017,7 +2017,7 @@ const TeamSection = ()=>{
                                                             columnNumber: 45
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "mt-3 font-normal text-sm mb-16",
+                                                            className: "mt-3 font-normal text-sm mb-16 text-brand-soft-text",
                                                             children: "We will help you choose the best country for your academic and personal goals."
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/sections/teamSection.jsx",
@@ -2027,7 +2027,7 @@ const TeamSection = ()=>{
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "absolute bottom-5 left-0 w-full px-6 flex justify-center",
                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                className: "w-full border border-blue-800/50 bg-blue-800 text-blue-100 shadow-lg cursor-pointer rounded-2xl px-4 py-3 font-medium transition-colors hover:bg-blue-800/80",
+                                                                className: "w-full border border-brand-primary bg-brand-primary/80 text-blue-100 shadow-lg cursor-pointer rounded-2xl px-4 py-3 font-medium transition-colors hover:bg-brand-primary/50",
                                                                 children: "Start your journey now!"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/sections/teamSection.jsx",
@@ -2211,7 +2211,7 @@ const SERVICES = [
 function ServicesSection() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "services",
-        className: "bg-linear-to-b bg-blue-900 py-20 px-4",
+        className: "bg-brand-primary text-brand-contrast py-20 px-4 transition-colors duration-200",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "max-w-7xl mx-auto",
             children: [
@@ -2221,7 +2221,7 @@ function ServicesSection() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "bg-blue-950 text-blue-100 rounded-full w-fit mx-auto px-5 py-2 text-lg font-semibold",
+                                    className: "bg-brand-accent text-brand-contrast rounded-full w-fit mx-auto px-5 py-2 text-lg font-semibold",
                                     children: "Services That We Prodive"
                                 }, void 0, false, {
                                     fileName: "[project]/src/sections/whatWeDo.jsx",
@@ -2241,7 +2241,7 @@ function ServicesSection() {
                                         duration: 0.5,
                                         delay: 0.2
                                     },
-                                    className: "text-4xl text-blue-100 text-center mt-3 font-semibold",
+                                    className: "text-4xl text-brand-contrast text-center mt-3 font-semibold",
                                     children: "Services Designed Around You"
                                 }, void 0, false, {
                                     fileName: "[project]/src/sections/whatWeDo.jsx",
@@ -2267,7 +2267,7 @@ function ServicesSection() {
                                 duration: 0.5,
                                 delay: 0.2
                             },
-                            className: "text-blue-200 text-lg leading-relaxed text-center",
+                            className: "text-brand-soft-text text-lg leading-relaxed text-center",
                             children: [
                                 "From your first enquiry to the day you land — ",
                                 "we're",
@@ -2313,10 +2313,10 @@ function ServicesSection() {
 }
 function ServiceCard({ icon, title, desc }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "bg-linear-145 bg-blue-950 border border-white/30 hover:scale-103 rounded-2xl p-7 flex flex-col gap-6 hover:shadow-md duration-300",
+        className: "bg-brand-accent border border-white/30 hover:scale-103 rounded-2xl p-7 flex flex-col gap-6 hover:shadow-md duration-300",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "bg-blue-100 p-2 rounded-2xl w-fit shadow-lg",
+                className: "bg-brand-secondary p-2 rounded-2xl w-fit shadow-lg",
                 children: icon
             }, void 0, false, {
                 fileName: "[project]/src/sections/whatWeDo.jsx",
@@ -2326,7 +2326,7 @@ function ServiceCard({ icon, title, desc }) {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                        className: "text-blue-100 text-2xl font-semibold mb-2.5 leading-snug",
+                        className: "text-brand-contrast text-2xl font-semibold mb-2.5 leading-snug",
                         children: title
                     }, void 0, false, {
                         fileName: "[project]/src/sections/whatWeDo.jsx",
@@ -2334,7 +2334,7 @@ function ServiceCard({ icon, title, desc }) {
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-blue-100 text-sm leading-relaxed",
+                        className: "text-brand-soft-text text-sm leading-relaxed",
                         children: desc
                     }, void 0, false, {
                         fileName: "[project]/src/sections/whatWeDo.jsx",
