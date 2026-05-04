@@ -57,10 +57,11 @@ const AboutSection = () => {
                         >
                             Read about us
                         </Link>
-                        <p className="text-gray-700 text-lg font-semibold mt-5">
+                        <div className="mb-20"></div>
+                        {/* <p className="text-gray-700 text-lg font-semibold mt-5">
                             Quick Start:
-                        </p>
-                        <div className="mt-2 flex flex-wrap justify-center md:justify-start gap-2">
+                        </p> */}
+                        {/* <div className="mt-2 flex flex-wrap justify-center md:justify-start gap-2">
                             <Link
                                 href={"/blogs"}
                                 className="px-5 py-2 bg-brand-accent text-brand-contrast border border-white/25 backdrop-blur-lg font-semibold rounded-xl hover:bg-brand-primary/70 duration-300 transition-all"
@@ -91,7 +92,7 @@ const AboutSection = () => {
                             >
                                 Free Mock Test
                             </Link>
-                        </div>
+                        </div> */}
                     </motion.div>
                     <section className="lg:w-6/12 w-full">
                         <motion.div

@@ -119,7 +119,7 @@ const HeroAnimation = () => {
                 </section>
             </section>
 
-            <div className="absolute z-0 bottom-26.5 md:bottom-32 left-1/2 -translate-x-1/2 lg:bottom-22.5 xl:left-115 2xl:left-130 2xl:bottom-24 lg:left-60 w-80 md:w-90 lg:w-150 flex justify-center lg:block opacity-80 lg:opacity-100">
+            <div className="absolute z-0 bottom-26.5 md:bottom-32 left-1/2 -translate-x-1/2 lg:bottom-22.5 xl:left-99 2xl:left-130 2xl:bottom-24 lg:left-80 w-80 md:w-90 lg:w-150 flex justify-center lg:block opacity-80 lg:opacity-100">
                 <Image
                     src={"/images/bg-stand.webp"}
                     width={840}

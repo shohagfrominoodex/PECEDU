@@ -8,11 +8,13 @@ import PartnerSection from "@/sections/partnerSection";
 import TeamSection from "@/sections/teamSection";
 import WhyChooseUs from "@/sections/whyChooseUs";
 import ServicesSection from "@/sections/servicesSection";
+import Navigation from "@/sections/navigation";
 
 const page = () => {
     return (
         <div className="bg-background text-foreground transition-colors duration-200">
             <HeroAnimation />
+            <Navigation />
             <AboutSection />
             <BenefitSection />
             <GlobalClients />

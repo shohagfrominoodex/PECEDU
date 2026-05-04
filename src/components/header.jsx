@@ -21,11 +21,31 @@ const navData = [
         name: "Study Abroad",
         href: "study-abroad",
         children: [
-            { name: "Study in the Signapore", href: "#" },
-            { name: "Study in the China", href: "#" },
-            { name: "Study in the Japan", href: "#" },
-            { name: "Study in the South Korea", href: "#" },
-            { name: "Study in the Malaysia", href: "#" },
+            {
+                name: "Study in the Signapore",
+                href: "#",
+                src: "/icons/singapore.png",
+            },
+            {
+                name: "Study in the China",
+                href: "#",
+                src: "/icons/china.png",
+            },
+            {
+                name: "Study in the Japan",
+                href: "#",
+                src: "/icons/japan.png",
+            },
+            {
+                name: "Study in the South Korea",
+                href: "#",
+                src: "/icons/south-korea.png",
+            },
+            {
+                name: "Study in the Malaysia",
+                href: "#",
+                src: "/icons/malaysia.png",
+            },
         ],
     },
     {
@@ -132,7 +152,27 @@ const Navbar = () => {
                                                             href={child.href}
                                                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-secondary hover:text-brand-primary rounded-lg transition-colors"
                                                         >
-                                                            {child.name}
+                                                            <div className="flex items-center gap-2">
+                                                                {child.src && (
+                                                                    <div>
+                                                                        <Image
+                                                                            src={
+                                                                                child?.src
+                                                                            }
+                                                                            width={
+                                                                                30
+                                                                            }
+                                                                            height={
+                                                                                30
+                                                                            }
+                                                                            alt={
+                                                                                child.name
+                                                                            }
+                                                                        />
+                                                                    </div>
+                                                                )}
+                                                                {child.name}
+                                                            </div>
                                                         </Link>
                                                     ),
                                                 )}
