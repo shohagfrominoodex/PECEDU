@@ -9,23 +9,25 @@ import TeamSection from "@/sections/teamSection";
 import WhyChooseUs from "@/sections/whyChooseUs";
 import ServicesSection from "@/sections/servicesSection";
 import Navigation from "@/sections/navigation";
+import VoucherSection from "@/sections/voucher";
 
 const page = () => {
-    return (
-        <div className="bg-background text-foreground transition-colors duration-200">
-            <HeroAnimation />
-            <Navigation />
-            <AboutSection />
-            <BenefitSection />
-            <GlobalClients />
-            <TeamSection />
-            <ServicesSection />
-            <ComparisonSection />
-            <WhyChooseUs />
-            <PartnerSection />
-            <BlogsSection />
-        </div>
-    );
+     return (
+          <div className="bg-background text-foreground transition-colors duration-200">
+               <HeroAnimation />
+               <AboutSection />
+               <Navigation />
+               <WhyChooseUs />
+               <BenefitSection />
+               <GlobalClients />
+               <TeamSection />
+               <ServicesSection />
+               <ComparisonSection />
+               <VoucherSection />
+               <PartnerSection />
+               <BlogsSection />
+          </div>
+     );
 };
 
 export default page;
