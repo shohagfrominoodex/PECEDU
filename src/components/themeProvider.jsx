@@ -8,7 +8,7 @@ const ThemeProvider = ({ children }) => {
             attribute="class"
             defaultTheme="blue"
             enableSystem={false}
-            themes={["blue", "green"]}
+            themes={["blue", "green", "orange", "purple"]}
         >
             {children}
         </NextThemesProvider>

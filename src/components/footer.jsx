@@ -39,14 +39,14 @@ const Footer = () => {
                             transition={{ duration: 0.5 }}
                             className="flex items-center gap-2 mb-6"
                         >
-                            <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center font-bold text-[#0b5d2e] text-xl">
+                            <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center font-bold text-brand-primary text-3xl">
                                 P
                             </div>
-                            <span className="text-2xl font-bold text-white tracking-tight">
+                            <span className="md:text-3xl text-2xl font-bold text-white tracking-tight">
                                 PecEdu
                             </span>
                         </motion.div>
-                        <p className="text-gray-400 mb-5 max-w-sm leading-relaxed">
+                        <p className="text-gray-300 mb-5 max-w-sm text-lg leading-relaxed">
                             PecEdu is a leading educational consultancy firm
                             that helps students achieve their dreams of studying
                             abroad.
@@ -57,28 +57,28 @@ const Footer = () => {
                                 target="_blank"
                                 className="text-gray-100 bg-brand-primary duration-300 hover:scale-110 rounded-full p-1.5"
                             >
-                                <FaFacebook size={20} />
+                                <FaFacebook size={25} />
                             </a>
                             <a
                                 href="#"
                                 target="_blank"
                                 className="text-gray-100 bg-brand-primary duration-300 hover:scale-110 rounded-full p-1.5"
                             >
-                                <FaLinkedin size={20} />
+                                <FaLinkedin size={25} />
                             </a>
                             <a
                                 href="#"
                                 target="_blank"
                                 className="text-gray-100 bg-brand-primary duration-300 hover:scale-110 rounded-full p-1.5"
                             >
-                                <FaInstagram size={20} />
+                                <FaInstagram size={25} />
                             </a>
                             <a
                                 href="#"
                                 target="_blank"
                                 className="text-gray-100 bg-brand-primary duration-300 hover:scale-110 rounded-full p-1.5"
                             >
-                                <FaYoutube size={20} />
+                                <FaYoutube size={25} />
                             </a>
                         </div>
                     </div>
@@ -90,7 +90,7 @@ const Footer = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: idx * 0.1 }}
                         >
-                            <h4 className="text-white font-bold mb-6">
+                            <h4 className="text-white font-bold text-xl mb-6">
                                 {section.title}
                             </h4>
                             <ul className="space-y-4">
@@ -98,7 +98,7 @@ const Footer = () => {
                                     <Link
                                         href={"/d"}
                                         key={lIdx}
-                                        className="text-gray-400 hover:text-white transition-colors flex items-center gap-1 group"
+                                        className="text-gray-400 hover:text-white transition-colors text-lg flex items-center gap-1 group"
                                     >
                                         {link}
                                     </Link>

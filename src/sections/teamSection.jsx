@@ -13,26 +13,32 @@ const TeamSection = () => {
         {
             id: 1,
             src: "/team/ceo.webp",
-            url: "/study-abroad-bangladesh",
-            title: "Why Choose Eduvisors",
+            name: "Arif Hasan",
+            designation: "CEO & Founder",
         },
         {
             id: 2,
             src: "/team/ceo.webp",
-            url: "/english-profiency",
-            title: "Benefits of Studying Abroad",
+            name: "Nusrat Jahan",
+            designation: "HR Manager",
         },
         {
             id: 3,
             src: "/team/ceo.webp",
-            url: "/universities",
-            title: "Partner Universities",
+            name: "Tanvir Rahman",
+            designation: "Software Engineer",
         },
         {
             id: 4,
             src: "/team/ceo.webp",
-            url: "/credentials",
-            title: "Our Credentials",
+            name: "Farzana Akter",
+            designation: "Business Development Officer",
+        },
+        {
+            id: 5,
+            src: "/team/ceo.webp",
+            name: "Imran Hossain",
+            designation: "Operations Executive",
         },
     ];
 
@@ -82,8 +88,8 @@ const TeamSection = () => {
         <section className="bg-foreground w-full">
             <section className="w-full mx-auto md:py-20 py-10 overflow-hidden relative">
                 <div className="mb-10">
-                    <p className="text-white/60 uppercase bg-white/10 w-fit mx-auto px-4 py-2 mb-5 rounded-full tracking-widest text-sm font-bold">
-                        Officials
+                    <p className="text-gray-200 uppercase bg-brand-primary/90 w-fit mx-auto px-4 py-2 mb-5 rounded-full tracking-widest text-sm font-bold">
+                        Our Officials
                     </p>
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
@@ -100,9 +106,7 @@ const TeamSection = () => {
                         className="md:text-lg text-base px-6 md:w-150 text-center text-blue-200 mx-auto"
                     >
                         We give our employees chance to grow and reach their
-                        potential. Our team has expertise in guiding students,
-                        and we make sure each employee is informed on industry
-                        trends.
+                        potential. Our team has expertise in guiding students.
                     </motion.p>
                 </div>
                 <div
@@ -127,18 +131,21 @@ const TeamSection = () => {
                                 key={set}
                                 className="flex gap-6 pr-6 shrink-0"
                             >
-                                {officials.map((benefit) => (
+                                {officials.map((official) => (
                                     <section
-                                        key={`${set}-${benefit.id}`}
+                                        key={`${set}-${official.id}`}
                                         className="relative w-75 sm:w-75 h-100 group shrink-0"
                                     >
                                         <section className="w-full h-full relative z-10 transition-transform duration-500 group-hover:scale-105">
                                             <Image
-                                                src={benefit.src}
+                                                src={official.src}
                                                 height={400}
                                                 width={1000}
                                                 className="rounded-3xl h-full shadow-lg object-cover"
-                                                alt={benefit.title}
+                                                alt={
+                                                    official.title ||
+                                                    "officials photo"
+                                                }
                                                 draggable={false}
                                             />
                                         </section>
@@ -147,27 +154,15 @@ const TeamSection = () => {
                                                 translate-y-20 group-hover:opacity-100
                                                 group-hover:pointer-events-auto backdrop-blur-[10px]
                                                 group-hover:translate-y-0 transition-all ease-in-out
-                                                duration-500 flex flex-col justify-center"
+                                                duration-1000 flex flex-col justify-center"
                                         >
-                                            <div className="self-start">
-                                                <span className="text-sm font-light px-3 py-1.5 bg-blue-100 text-brand-primary rounded-full">
-                                                    - Why Choose Us
-                                                </span>
-                                            </div>
-                                            <h1 className="mt-5 font-medium text-3xl text-brand-contrast">
-                                                {benefit.title ||
-                                                    `Eduvisors helps you find your perfect study
-                                                    abroad destination.`}
-                                            </h1>
-                                            <p className="mt-3 font-normal text-sm mb-16 text-brand-soft-text">
-                                                We will help you choose the best
-                                                country for your academic and
-                                                personal goals.
-                                            </p>
-                                            <div className="absolute bottom-5 left-0 w-full px-6 flex justify-center">
-                                                <button className="w-full border border-brand-primary bg-brand-primary/80 text-blue-100 shadow-lg cursor-pointer rounded-2xl px-4 py-3 font-medium transition-colors hover:bg-brand-primary/50">
-                                                    Start your journey now!
-                                                </button>
+                                            <div className="text-center">
+                                                <h1 className="mt-5 font-medium text-3xl text-brand-contrast">
+                                                    {official.name}
+                                                </h1>
+                                                <p className="mt-3 font-normal text-lg mb-16 text-brand-soft-text">
+                                                    {official.designation}
+                                                </p>
                                             </div>
                                         </section>
                                     </section>

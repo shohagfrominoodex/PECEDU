@@ -1,10 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { ChevronDown, Menu, MoveUpRight, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import ToggleButton from "./toggleButton";
 
 const navData = [
     { name: "Home", href: "/" },
@@ -93,13 +92,13 @@ const Navbar = () => {
                 <div className="flex items-center justify-between px-4 py-3 rounded-2xl border border-[var(--nav-border)] backdrop-blur-xl bg-[var(--nav-background)] shadow-2xl transition-colors duration-200">
                     <Link
                         href={"/"}
-                        className="flex items-center gap-2 bg-white rounded-lg"
+                        className="flex items-center lg:h-15 h-12 w-25 lg:w-30 gap-2 bg-white rounded-lg"
                     >
                         <Image
                             src={"/logo/logo.png"}
                             alt="pec edu logo"
-                            height={50}
-                            width={100}
+                            height={90}
+                            width={200}
                         />
                     </Link>
 
@@ -113,7 +112,7 @@ const Navbar = () => {
                             >
                                 <Link
                                     href={item.href}
-                                    className="flex items-center gap-1 text-sm font-medium text-[var(--nav-text)] hover:text-brand-muted transition-all py-2"
+                                    className="flex items-center gap-1 text-sm xl:text-lg font-medium text-[var(--nav-text)] hover:text-brand-muted transition-all py-2"
                                 >
                                     {item.name}
                                     {item.children && (
@@ -143,14 +142,14 @@ const Navbar = () => {
                                                     y: 10,
                                                     scale: 0.95,
                                                 }}
-                                                className="absolute top-full left-0 mt-2 w-56 bg-white/95 backdrop-blur-2xl rounded-xl shadow-2xl border border-white/20 p-2"
+                                                className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-70 bg-white/95 backdrop-blur-2xl rounded-xl shadow-2xl border border-white/20 p-2"
                                             >
                                                 {item?.children?.map(
                                                     (child, cIdx) => (
                                                         <Link
                                                             key={cIdx}
                                                             href={child.href}
-                                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-secondary hover:text-brand-primary rounded-lg transition-colors"
+                                                            className="block px-4 py-2 text-lg text-gray-700 hover:bg-brand-secondary hover:text-brand-primary rounded-lg transition-colors"
                                                         >
                                                             <div className="flex items-center gap-2">
                                                                 {child.src && (
@@ -184,10 +183,6 @@ const Navbar = () => {
                     </div>
 
                     <div className="flex items-center gap-2">
-                        <div>
-                            <ToggleButton />
-                        </div>
-
                         <div className="hidden lg:block">
                             <Link
                                 href={"/apply-now"}
