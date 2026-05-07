@@ -47,7 +47,7 @@ const GlobalClients = () => {
                         },
                     });
                 },
-                { once: true, amount: 0.5 },
+                { once: false, amount: 0.5 },
             );
         });
     }, []);

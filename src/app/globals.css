@@ -68,10 +68,10 @@
 }
 .orange {
     --background: #fdf6f0;
-    --foreground: #2e1c05;
-    --brand-primary: #573100;
+    --foreground: rgb(138, 62, 0);
+    --brand-primary: orange;
     --brand-secondary: #fcebdc;
-    --brand-accent: #804e15;
+    --brand-accent: rgb(240, 165, 0);
     --brand-muted: #f7dfbb;
     --brand-contrast: #ffffff;
     --brand-soft-text: #fcf2dc;
@@ -92,6 +92,10 @@
     --nav-background: rgba(107, 33, 168, 0.78);
     --nav-border: rgba(216, 180, 254, 0.45);
     --nav-text: rgba(255, 255, 255, 0.96);
+}
+
+.scroll-none {
+    scrollbar-width: none;
 }
 
 body {

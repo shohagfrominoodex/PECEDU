@@ -9,7 +9,7 @@ const navData = [
     { name: "Home", href: "/" },
     {
         name: "About",
-        href: "about",
+        href: "/about",
         children: [
             { name: "Our Mission", href: "#" },
             { name: "Our Team", href: "#" },
@@ -18,38 +18,38 @@ const navData = [
     },
     {
         name: "Study Abroad",
-        href: "study-abroad",
+        href: "/study-abroad",
         children: [
             {
                 name: "Study in the Signapore",
-                href: "#",
+                href: "/study-abroad/singapore-from-bangladesh",
                 src: "/icons/singapore.png",
             },
             {
                 name: "Study in the China",
-                href: "#",
+                href: "/study-abroad/china-from-bangladesh",
                 src: "/icons/china.png",
             },
             {
                 name: "Study in the Japan",
-                href: "#",
+                href: "/study-abroad/japan-from-bangladesh",
                 src: "/icons/japan.png",
             },
             {
                 name: "Study in the South Korea",
-                href: "#",
+                href: "/study-abroad/south-korea-from-bangladesh",
                 src: "/icons/south-korea.png",
             },
             {
                 name: "Study in the Malaysia",
-                href: "#",
+                href: "/study-abroad/malaysia-from-bangladesh",
                 src: "/icons/malaysia.png",
             },
         ],
     },
     {
         name: "Popular University",
-        href: "universities",
+        href: "/universities",
         children: [
             { name: "National University of Singapore", href: "#" },
             {
@@ -64,7 +64,7 @@ const navData = [
     },
     {
         name: "Travel & Tours",
-        href: "travel-tours",
+        href: "/travel-tours",
         children: [
             { name: "UK", href: "#" },
             { name: "USA", href: "#" },
@@ -72,9 +72,9 @@ const navData = [
             { name: "Australia", href: "#" },
         ],
     },
-    { name: "Blogs", href: "blogs" },
+    { name: "Blogs", href: "/blogs" },
 
-    { name: "Contact", href: "contact" },
+    { name: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {
